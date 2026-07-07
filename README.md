@@ -24,7 +24,7 @@ zips/                       generated artifacts — commit them, GitHub serves t
 1. Create a repo named `kodi-hub` on your **personal** GitHub (private works only if
    you make it public or use a token URL — Kodi fetches anonymously, so **public** is
    the simple path; there's nothing sensitive here).
-2. Replace `YOURUSER` in `repository.jacobshub/addon.xml` with your GitHub username.
+2. The repo URLs in `repository.jacobshub/addon.xml` already point at jaek-is-alive/kodi-hub.
 3. `python3 tools/build_repo.py && git add -A && git commit -m 'build' && git push`
 
 ## Installing on a Kodi box
@@ -33,7 +33,7 @@ Prereqs (installed normally from their own repos): Umbrella, CocoScrapers, The L
 The hub deep-links into them; it deliberately does **not** declare them as
 dependencies so it installs cleanly anywhere and just greys out missing sections.
 
-1. Settings → File manager → Add source → `https://raw.githubusercontent.com/YOURUSER/kodi-hub/main/zips/`
+1. Settings → File manager → Add source → `https://raw.githubusercontent.com/jaek-is-alive/kodi-hub/main/zips/`
    (or just download `zips/repository.jacobshub/repository.jacobshub-1.0.0.zip`).
 2. Add-ons → Install from zip → the repository zip.
 3. Add-ons → Install from repository → Jacob's Hub Repository → Video add-ons → Jacob's Hub.
