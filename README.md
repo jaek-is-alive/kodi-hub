@@ -33,7 +33,7 @@ Prereqs (installed normally from their own repos): Umbrella, CocoScrapers, The L
 The hub deep-links into them; it deliberately does **not** declare them as
 dependencies so it installs cleanly anywhere and just greys out missing sections.
 
-1. Settings → File manager → Add source → `https://raw.githubusercontent.com/jaek-is-alive/kodi-hub/main/zips/`
+1. Settings → File manager → Add source → `https://jaek-is-alive.github.io/kodi-hub/`
    (or just download `zips/repository.jacobshub/repository.jacobshub-1.0.0.zip`).
 2. Add-ons → Install from zip → the repository zip.
 3. Add-ons → Install from repository → Jacob's Hub Repository → Video add-ons → Jacob's Hub.
