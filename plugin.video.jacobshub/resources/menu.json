@@ -20,63 +20,88 @@
       "requires": "plugin.video.the-loop"
     },
     {
+      "label": "Live TV",
+      "menu": "livetv",
+      "requires": "plugin.video.the-loop"
+    },
+    {
+      "label": "Kids",
+      "menu": "kids"
+    },
+    {
       "label": "Tools & Setup",
       "menu": "tools"
     }
   ],
   "sports": [
     {
-      "label": "Today's Schedule",
+      "label": "📅 Today's Games & Full Schedule",
       "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/xmls/auto_fixtures.json"
     },
     {
-      "label": "Today's Football",
-      "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/xmls/ScoreZone/soccertoday4.json"
+      "label": "🔎 Find My Game / Team",
+      "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/find_my_team.json"
     },
     {
-      "label": "24/7 Zone",
-      "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/247Zone.json"
-    },
-    {
-      "label": "Auto Zone",
-      "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/AutoZone.json"
-    },
-    {
-      "label": "Fight Zone",
-      "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/xmls/FightZone19/fightzonemain.json"
-    },
-    {
-      "label": "NFL Zone",
+      "label": "🏈 NFL Football",
       "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/xmls/NFLZone19/nfl.json"
     },
     {
-      "label": "NBA Zone",
-      "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/xmls/NBAZone19/nba.json"
-    },
-    {
-      "label": "MLB Zone",
-      "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/xmls/MLBZone19/mlb.json"
-    },
-    {
-      "label": "NHL Zone",
-      "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/xmls/NHLZone19/nhl.json"
-    },
-    {
-      "label": "NCAA Zone",
+      "label": "🏈 College Football & Basketball (NCAA)",
       "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/xmls/NCAAZone19/ncaa.json"
     },
     {
-      "label": "Replay Zone",
+      "label": "🏀 NBA Basketball",
+      "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/xmls/NBAZone19/nba.json"
+    },
+    {
+      "label": "⚾ MLB Baseball",
+      "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/xmls/MLBZone19/mlb.json"
+    },
+    {
+      "label": "🏒 NHL Hockey",
+      "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/xmls/NHLZone19/nhl.json"
+    },
+    {
+      "label": "🥊 UFC & Boxing (Fights)",
+      "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/xmls/FightZone19/fightzonemain.json"
+    },
+    {
+      "label": "🏁 Auto Racing — NASCAR / F1 / IndyCar",
+      "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/AutoZone.json"
+    },
+    {
+      "label": "⚽ Soccer (Today)",
+      "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/xmls/ScoreZone/soccertoday4.json"
+    },
+    {
+      "label": "🏈 UFL Football",
+      "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/xmls/UFLZone19/ufl.json"
+    },
+    {
+      "label": "🎯 Darts",
+      "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/darts/home.json"
+    },
+    {
+      "label": "🏉 Rugby (Today)",
+      "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/xmls/FanZone19/Rugby.json"
+    },
+    {
+      "label": "🏏 Cricket (Today)",
+      "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/xmls/FanZone19/cricket.json"
+    },
+    {
+      "label": "⏪ Replays",
       "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/ReplayZone.json"
     },
     {
-      "label": "The Loop \u2014 Full Menu",
+      "label": "📺 The Loop — Full Menu",
       "path": "plugin://plugin.video.the-loop/"
     }
   ],
   "search": [
     {
-      "label": "Search Movies\u2026",
+      "label": "Search Movies…",
       "hub": "search",
       "params": {
         "kind": "movies"
@@ -84,7 +109,7 @@
       "requires": "plugin.video.umbrella"
     },
     {
-      "label": "Search TV Shows\u2026",
+      "label": "Search TV Shows…",
       "hub": "search",
       "params": {
         "kind": "tv"
@@ -92,7 +117,7 @@
       "requires": "plugin.video.umbrella"
     },
     {
-      "label": "Search Live Sports\u2026",
+      "label": "Search Live Sports…",
       "hub": "search",
       "params": {
         "kind": "loop"
@@ -112,7 +137,7 @@
   ],
   "tools": [
     {
-      "label": "[B]\u2699 Setup \u2014 install Umbrella, CocoScrapers & The Loop[/B]",
+      "label": "[B]⚙ Setup — install Umbrella, CocoScrapers & The Loop[/B]",
       "hub": "setup",
       "plot": "Installs the backend add-ons (and their dependencies) from this repo, then offers to wire CocoScrapers into Umbrella."
     },
@@ -134,7 +159,7 @@
       "requires": "plugin.video.umbrella"
     },
     {
-      "label": "Status \u2014 what's installed / connected",
+      "label": "Status — what's installed / connected",
       "hub": "status"
     },
     {
@@ -202,6 +227,112 @@
       "label": "Clear The Loop cache",
       "run": "maintenance.loop_clear_cache",
       "requires": "plugin.video.the-loop"
+    }
+  ],
+  "livetv": [
+    {
+      "label": "📡 All Live Channels (A–Z)",
+      "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/1__all_categories.json"
+    },
+    {
+      "label": "ABC",
+      "path": "plugin://plugin.video.the-loop/search_json/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/ABC.json?query=&dialog=false"
+    },
+    {
+      "label": "CBS",
+      "path": "plugin://plugin.video.the-loop/search_json/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/CBS.json?query=&dialog=false"
+    },
+    {
+      "label": "NBC",
+      "path": "plugin://plugin.video.the-loop/search_json/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/NBC.json?query=&dialog=false"
+    },
+    {
+      "label": "FOX",
+      "path": "plugin://plugin.video.the-loop/search_json/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/FOX.json?query=&dialog=false"
+    },
+    {
+      "label": "ESPN",
+      "path": "plugin://plugin.video.the-loop/search_json/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/ESPN.json?query=&dialog=false"
+    },
+    {
+      "label": "📍 US Local Channels",
+      "path": "plugin://plugin.video.the-loop/search_json/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/US_LOCAL.json?query=&dialog=false"
+    },
+    {
+      "label": "🆓 Free Live TV (Pluto, Plex, Stirr & more)",
+      "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/247Zone.json"
+    }
+  ],
+  "kids": [
+    {
+      "label": "Disney Channel",
+      "path": "plugin://plugin.video.the-loop/search_json/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/Disney_Channel.json?query=&dialog=false",
+      "requires": "plugin.video.the-loop"
+    },
+    {
+      "label": "Disney Jr",
+      "path": "plugin://plugin.video.the-loop/search_json/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/Disney_JR.json?query=&dialog=false",
+      "requires": "plugin.video.the-loop"
+    },
+    {
+      "label": "Disney XD",
+      "path": "plugin://plugin.video.the-loop/search_json/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/Disney_XD.json?query=&dialog=false",
+      "requires": "plugin.video.the-loop"
+    },
+    {
+      "label": "Cartoon Network",
+      "path": "plugin://plugin.video.the-loop/search_json/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/Cartoon_Network.json?query=&dialog=false",
+      "requires": "plugin.video.the-loop"
+    },
+    {
+      "label": "Boomerang",
+      "path": "plugin://plugin.video.the-loop/search_json/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/Boomerang.json?query=&dialog=false",
+      "requires": "plugin.video.the-loop"
+    },
+    {
+      "label": "Nickelodeon",
+      "path": "plugin://plugin.video.the-loop/search_json/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/Nick.json?query=&dialog=false",
+      "requires": "plugin.video.the-loop"
+    },
+    {
+      "label": "Nick Jr",
+      "path": "plugin://plugin.video.the-loop/search_json/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/Nick_Jr.json?query=&dialog=false",
+      "requires": "plugin.video.the-loop"
+    },
+    {
+      "label": "Nicktoons",
+      "path": "plugin://plugin.video.the-loop/search_json/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/Nicktoons.json?query=&dialog=false",
+      "requires": "plugin.video.the-loop"
+    },
+    {
+      "label": "Universal Kids",
+      "path": "plugin://plugin.video.the-loop/search_json/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/Universal_Kids.json?query=&dialog=false",
+      "requires": "plugin.video.the-loop"
+    },
+    {
+      "label": "BabyTV",
+      "path": "plugin://plugin.video.the-loop/search_json/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/BABY_tv.json?query=&dialog=false",
+      "requires": "plugin.video.the-loop"
+    },
+    {
+      "label": "🎬 Kids & Family Movies (Umbrella)",
+      "path": "plugin://plugin.video.umbrella/?action=movieGenres&url=tmdb_genre",
+      "requires": "plugin.video.umbrella",
+      "plot": "Opens Umbrella's genre list — pick Animation or Family."
+    },
+    {
+      "label": "📺 Kids & Family Shows (Umbrella)",
+      "path": "plugin://plugin.video.umbrella/?action=tvGenres&url=tmdb_genre",
+      "requires": "plugin.video.umbrella",
+      "plot": "Opens Umbrella's genre list — pick Animation or Family."
+    },
+    {
+      "label": "🔎 Search Kids Movies…",
+      "hub": "search",
+      "params": {
+        "kind": "movies"
+      },
+      "requires": "plugin.video.umbrella"
     }
   ]
 }
