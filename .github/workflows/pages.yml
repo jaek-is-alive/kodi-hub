@@ -38,6 +38,7 @@ jobs:
           cp tools/pages_index.html _site/index.html
           # short-URL + add-source copy of the repo zip at the site root
           cp zips/repository.jacobshub/repository.jacobshub-*.zip _site/hub.zip
+          cp zips/repository.jacobshub/repository.jacobshub-*.zip _site/repository.jacobshub.zip
 
       - uses: actions/configure-pages@v5
 
