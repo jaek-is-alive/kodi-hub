@@ -1,0 +1,55 @@
+{
+  "root": [
+    {"label": "Movies", "path": "plugin://plugin.video.umbrella/?action=movieNavigator", "requires": "plugin.video.umbrella"},
+    {"label": "TV Shows", "path": "plugin://plugin.video.umbrella/?action=tvNavigator", "requires": "plugin.video.umbrella"},
+    {"label": "My Movies", "path": "plugin://plugin.video.umbrella/?action=mymovieNavigator", "requires": "plugin.video.umbrella"},
+    {"label": "My TV Shows", "path": "plugin://plugin.video.umbrella/?action=mytvNavigator", "requires": "plugin.video.umbrella"},
+    {"label": "Anime", "path": "plugin://plugin.video.umbrella/?action=anime_Navigator", "requires": "plugin.video.umbrella"},
+    {"label": "Live Sports (The Loop)", "menu": "sports", "requires": "plugin.video.the-loop"},
+    {"label": "Search", "menu": "search"},
+    {"label": "Tools & Setup", "menu": "tools"}
+  ],
+
+  "sports": [
+    {"label": "Today's Schedule", "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/xmls/auto_fixtures.json"},
+    {"label": "Today's Football", "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/xmls/ScoreZone/soccertoday4.json"},
+    {"label": "24/7 Zone", "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/247Zone.json"},
+    {"label": "Auto Zone", "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/AutoZone.json"},
+    {"label": "Fight Zone", "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/xmls/FightZone19/fightzonemain.json"},
+    {"label": "NFL Zone", "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/xmls/NFLZone19/nfl.json"},
+    {"label": "NBA Zone", "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/xmls/NBAZone19/nba.json"},
+    {"label": "MLB Zone", "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/xmls/MLBZone19/mlb.json"},
+    {"label": "NHL Zone", "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/xmls/NHLZone19/nhl.json"},
+    {"label": "NCAA Zone", "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/xmls/NCAAZone19/ncaa.json"},
+    {"label": "Replay Zone", "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/ReplayZone.json"},
+    {"label": "The Loop — Full Menu", "path": "plugin://plugin.video.the-loop/"}
+  ],
+
+  "search": [
+    {"label": "Search Movies…", "hub": "search", "params": {"kind": "movies"}, "requires": "plugin.video.umbrella"},
+    {"label": "Search TV Shows…", "hub": "search", "params": {"kind": "tv"}, "requires": "plugin.video.umbrella"},
+    {"label": "Search Live Sports…", "hub": "search", "params": {"kind": "loop"}, "requires": "plugin.video.the-loop"},
+    {"label": "Umbrella Search Hub", "path": "plugin://plugin.video.umbrella/?action=tools_searchNavigator", "requires": "plugin.video.umbrella"},
+    {"label": "The Loop Search Menu", "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/searchmain.json", "requires": "plugin.video.the-loop"}
+  ],
+
+  "tools": [
+    {"label": "[B]Connect AllDebrid[/B]", "run": "auth.alldebrid", "requires": "plugin.video.umbrella", "plot": "Starts Umbrella's AllDebrid device-code auth flow."},
+    {"label": "[B]Connect TorBox[/B]", "run": "auth.torbox", "requires": "plugin.video.umbrella", "plot": "Starts Umbrella's TorBox auth flow."},
+    {"label": "Connect Trakt", "run": "auth.trakt", "requires": "plugin.video.umbrella"},
+    {"label": "Connect Real-Debrid", "run": "auth.realdebrid", "requires": "plugin.video.umbrella"},
+    {"label": "Connect Premiumize", "run": "auth.premiumize", "requires": "plugin.video.umbrella"},
+    {"label": "Status — what's installed / connected", "hub": "status"},
+    {"label": "[B]Auto-configure CocoScrapers[/B] (wire into Umbrella)", "hub": "preset", "params": {"id": "wire_cocoscrapers"}, "requires": "plugin.video.umbrella", "plot": "Points Umbrella's external provider at script.module.cocoscrapers and sets a sane scrape timeout."},
+    {"label": "Apply recommended CocoScrapers providers", "hub": "preset", "params": {"id": "coco_recommended"}, "requires": "script.module.cocoscrapers"},
+    {"label": "AllDebrid account info", "run": "accounts.alldebrid", "requires": "plugin.video.umbrella"},
+    {"label": "TorBox account info", "run": "accounts.torbox", "requires": "plugin.video.umbrella"},
+    {"label": "Umbrella settings", "hub": "settings", "params": {"id": "plugin.video.umbrella"}},
+    {"label": "CocoScrapers settings", "run": "maintenance.coco_settings", "requires": "script.module.cocoscrapers"},
+    {"label": "The Loop settings", "hub": "settings", "params": {"id": "plugin.video.the-loop"}},
+    {"label": "Force Trakt sync (Umbrella)", "run": "maintenance.umbrella_force_trakt_sync", "requires": "plugin.video.umbrella"},
+    {"label": "Clear Umbrella provider cache", "run": "maintenance.umbrella_clear_providers", "requires": "plugin.video.umbrella"},
+    {"label": "Clear Umbrella all caches", "run": "maintenance.umbrella_clear_all", "requires": "plugin.video.umbrella"},
+    {"label": "Clear The Loop cache", "run": "maintenance.loop_clear_cache", "requires": "plugin.video.the-loop"}
+  ]
+}

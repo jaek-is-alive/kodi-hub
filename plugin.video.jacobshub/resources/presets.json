@@ -1,0 +1,33 @@
+{
+  "wire_cocoscrapers": {
+    "label": "Wire Umbrella to CocoScrapers (external provider) and set a 60s scrape timeout.",
+    "settings": {
+      "plugin.video.umbrella": {
+        "provider.external.enabled": "true",
+        "external_provider.module": "script.module.cocoscrapers",
+        "external_provider.name": "cocoscrapers",
+        "scrapers.timeout": "60"
+      }
+    },
+    "post_notice": "Umbrella is now using CocoScrapers as its provider module. Run 'Apply recommended CocoScrapers providers' next if you haven't."
+  },
+
+  "coco_recommended": {
+    "label": "Enable the reliable CocoScrapers torrent providers (Torrentio, BitSearch, EZTV, TorrentDownload, TorrentQuest, 1337x, TorrentGalaxy, Knaben) and sane filters.",
+    "settings": {
+      "script.module.cocoscrapers": {
+        "provider.torrentio": "true",
+        "provider.bitsearch": "true",
+        "provider.eztv": "true",
+        "provider.torrentdownload": "true",
+        "provider.torrentquest": "true",
+        "provider.1337x": "true",
+        "provider.torrentgalaxy": "true",
+        "provider.knaben": "true",
+        "filter.undesirables": "true",
+        "filter.foreign.single.audio": "true",
+        "debug.enabled": "false"
+      }
+    }
+  }
+}
