@@ -29,6 +29,22 @@
       "menu": "kids"
     },
     {
+      "label": "[COLOR orange]🎲 Surprise Movie[/COLOR]",
+      "hub": "surprise",
+      "params": {
+        "kind": "movie"
+      },
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR orange]🎲 Surprise Sport[/COLOR]",
+      "hub": "surprise",
+      "params": {
+        "kind": "sport"
+      },
+      "requires": "plugin.video.the-loop"
+    },
+    {
       "label": "[COLOR khaki]🛠️ Tools & Setup[/COLOR]",
       "menu": "tools"
     }
@@ -236,27 +252,27 @@
     },
     {
       "label": "ABC",
-      "path": "plugin://plugin.video.the-loop/search_json/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/ABC.json?query=&dialog=false"
+      "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/ABC.json"
     },
     {
       "label": "CBS",
-      "path": "plugin://plugin.video.the-loop/search_json/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/CBS.json?query=&dialog=false"
+      "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/CBS.json"
     },
     {
       "label": "NBC",
-      "path": "plugin://plugin.video.the-loop/search_json/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/NBC.json?query=&dialog=false"
+      "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/NBC.json"
     },
     {
       "label": "FOX",
-      "path": "plugin://plugin.video.the-loop/search_json/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/FOX.json?query=&dialog=false"
+      "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/FOX.json"
     },
     {
       "label": "ESPN",
-      "path": "plugin://plugin.video.the-loop/search_json/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/ESPN.json?query=&dialog=false"
+      "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/ESPN.json"
     },
     {
       "label": "📍 US Local Channels",
-      "path": "plugin://plugin.video.the-loop/search_json/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/US_LOCAL.json?query=&dialog=false"
+      "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/US_LOCAL.json"
     },
     {
       "label": "🆓 Free Live TV (Pluto, Plex, Stirr & more)",
@@ -266,52 +282,52 @@
   "kids": [
     {
       "label": "Disney Channel",
-      "path": "plugin://plugin.video.the-loop/search_json/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/Disney_Channel.json?query=&dialog=false",
+      "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/Disney_Channel.json",
       "requires": "plugin.video.the-loop"
     },
     {
       "label": "Disney Jr",
-      "path": "plugin://plugin.video.the-loop/search_json/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/Disney_JR.json?query=&dialog=false",
+      "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/Disney_JR.json",
       "requires": "plugin.video.the-loop"
     },
     {
       "label": "Disney XD",
-      "path": "plugin://plugin.video.the-loop/search_json/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/Disney_XD.json?query=&dialog=false",
+      "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/Disney_XD.json",
       "requires": "plugin.video.the-loop"
     },
     {
       "label": "Cartoon Network",
-      "path": "plugin://plugin.video.the-loop/search_json/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/Cartoon_Network.json?query=&dialog=false",
+      "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/Cartoon_Network.json",
       "requires": "plugin.video.the-loop"
     },
     {
       "label": "Boomerang",
-      "path": "plugin://plugin.video.the-loop/search_json/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/Boomerang.json?query=&dialog=false",
+      "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/Boomerang.json",
       "requires": "plugin.video.the-loop"
     },
     {
       "label": "Nickelodeon",
-      "path": "plugin://plugin.video.the-loop/search_json/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/Nick.json?query=&dialog=false",
+      "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/Nick.json",
       "requires": "plugin.video.the-loop"
     },
     {
       "label": "Nick Jr",
-      "path": "plugin://plugin.video.the-loop/search_json/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/Nick_Jr.json?query=&dialog=false",
+      "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/Nick_Jr.json",
       "requires": "plugin.video.the-loop"
     },
     {
       "label": "Nicktoons",
-      "path": "plugin://plugin.video.the-loop/search_json/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/Nicktoons.json?query=&dialog=false",
+      "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/Nicktoons.json",
       "requires": "plugin.video.the-loop"
     },
     {
       "label": "Universal Kids",
-      "path": "plugin://plugin.video.the-loop/search_json/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/Universal_Kids.json?query=&dialog=false",
+      "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/Universal_Kids.json",
       "requires": "plugin.video.the-loop"
     },
     {
       "label": "BabyTV",
-      "path": "plugin://plugin.video.the-loop/search_json/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/BABY_tv.json?query=&dialog=false",
+      "path": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/xmls/CHANNEL_LIST/BABY_tv.json",
       "requires": "plugin.video.the-loop"
     },
     {

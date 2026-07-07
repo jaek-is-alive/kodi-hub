@@ -10,6 +10,7 @@ import sys
 import traceback
 import urllib.parse
 import time
+import random
 
 import xbmc
 import xbmcaddon
@@ -292,6 +293,23 @@ def do_setup():
     xbmc.executebuiltin('Container.Refresh')
 
 
+def do_surprise(kind):
+    """Spin a random pick: a movie (via Umbrella search) or a live sport zone."""
+    pool = target('surprise.%s' % kind)
+    if not pool:
+        notify('No surprises configured for "%s"' % kind, xbmcgui.NOTIFICATION_ERROR)
+        return
+    pick = random.choice(pool)
+    if kind == 'movie':
+        notify('\U0001F3AC Tonight\'s pick: %s' % pick)
+        url = ('plugin://plugin.video.umbrella/?action=movieSearchterm&name=%s'
+               % urllib.parse.quote_plus(pick))
+    else:
+        notify('\U0001F3B2 Surprise: %s!' % pick.get('name', 'Sport'))
+        url = pick['url']
+    xbmc.executebuiltin('Container.Update(%s)' % url)
+
+
 # ---------------------------------------------------------------------------
 # router
 # ---------------------------------------------------------------------------
@@ -317,6 +335,8 @@ def router():
         status_report()
     elif action == 'setup':
         do_setup()
+    elif action == 'surprise':
+        do_surprise(params.get('kind', 'movie'))
     elif action == 'builtin':
         xbmc.executebuiltin(params.get('cmd', ''))
     elif action == 'missing':

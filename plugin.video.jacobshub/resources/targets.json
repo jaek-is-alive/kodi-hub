@@ -78,5 +78,70 @@
       "addon_id": "plugin.video.the-loop",
       "label": "The Loop (live sports)"
     }
-  ]
+  ],
+  "surprise": {
+    "movie": [
+      "The Goonies",
+      "Jurassic Park",
+      "Back to the Future",
+      "Ghostbusters",
+      "Indiana Jones and the Raiders of the Lost Ark",
+      "The Princess Bride",
+      "Jumanji",
+      "Shrek",
+      "Toy Story",
+      "The Incredibles",
+      "Finding Nemo",
+      "Moana",
+      "The Lego Movie",
+      "Home Alone",
+      "E.T. the Extra-Terrestrial",
+      "The Sandlot",
+      "Big",
+      "Groundhog Day",
+      "The Mask",
+      "Men in Black",
+      "Spider-Man: Into the Spider-Verse",
+      "Guardians of the Galaxy",
+      "The Matrix",
+      "Top Gun",
+      "Jaws",
+      "The Karate Kid",
+      "Willy Wonka & the Chocolate Factory"
+    ],
+    "sport": [
+      {
+        "name": "NFL Football",
+        "url": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/xmls/NFLZone19/nfl.json"
+      },
+      {
+        "name": "NBA Basketball",
+        "url": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/xmls/NBAZone19/nba.json"
+      },
+      {
+        "name": "College (NCAA)",
+        "url": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/xmls/NCAAZone19/ncaa.json"
+      },
+      {
+        "name": "MLB Baseball",
+        "url": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/xmls/MLBZone19/mlb.json"
+      },
+      {
+        "name": "NHL Hockey",
+        "url": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/xmls/NHLZone19/nhl.json"
+      },
+      {
+        "name": "UFC & Boxing",
+        "url": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/xmls/FightZone19/fightzonemain.json"
+      },
+      {
+        "name": "Auto Racing",
+        "url": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/AutoZone.json"
+      },
+      {
+        "name": "Soccer",
+        "url": "plugin://plugin.video.the-loop/get_list/https://loopaddon.uk/files/k19/xmls/ScoreZone/soccertoday4.json"
+      }
+    ]
+  }
 }
