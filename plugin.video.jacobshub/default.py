@@ -9,7 +9,6 @@ import os
 import sys
 import traceback
 import urllib.parse
-import time
 import random
 
 import xbmc
@@ -81,15 +80,26 @@ def notify(msg, icon=xbmcgui.NOTIFICATION_INFO, time=4000):
 
 
 def welcome_splash():
-    """A quick branded, time-aware hello when the hub's home screen opens."""
-    h = time.localtime().tm_hour
-    if h < 5:    greet = 'Burning the midnight oil'
-    elif h < 12: greet = 'Good morning'
-    elif h < 17: greet = 'Good afternoon'
-    elif h < 22: greet = 'Good evening'
-    else:        greet = 'Winding down'
-    xbmcgui.Dialog().notification('\U0001F37F ' + THEATER_NAME, greet + ', family!',
-                                  ICON, 3500)
+    """Show a random kid-friendly fact (Pokemon / Kirby / Minecraft) on the home screen."""
+    facts = load_json('facts.json')
+    labels = {'pokemon': '\u26A1 Pok\u00e9mon fact',
+              'kirby': '\u2B50 Kirby fact',
+              'minecraft': '\u26CF\uFE0F Minecraft fact'}
+    pool = []
+    for topic, items in facts.items():
+        label = labels.get(topic, topic.title() + ' fact')
+        pool.extend((label, f) for f in items)
+    if not pool:
+        return
+    win = xbmcgui.Window(10000)
+    last = win.getProperty('jacobshub_last_fact')
+    heading, fact = random.choice(pool)
+    for _ in range(5):  # avoid repeating the same fact twice in a row
+        if fact != last:
+            break
+        heading, fact = random.choice(pool)
+    win.setProperty('jacobshub_last_fact', fact)
+    xbmcgui.Dialog().notification(heading, fact, ICON, 7000)
 
 
 # ---------------------------------------------------------------------------

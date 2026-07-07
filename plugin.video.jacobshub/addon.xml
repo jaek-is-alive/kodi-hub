@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.jacobshub" name="Jake's Config Hub" version="1.0.5" provider-name="jacob">
+<addon id="plugin.video.jacobshub" name="Jake's Config Hub" version="1.0.6" provider-name="jacob">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
     </requires>
@@ -15,7 +15,8 @@
             <icon>icon.png</icon>
             <fanart>fanart.png</fanart>
         </assets>
-        <news>v1.0.5 streamline Setup (fewer confirmation dialogs)
+        <news>v1.0.6 home screen now shows random Pokémon/Kirby/Minecraft facts
+v1.0.5 streamline Setup (fewer confirmation dialogs)
 v1.0.4 Surprise Me buttons + fix Live TV/Kids channels (use get_list, no search prompt)
 v1.0.3 rename to Jake's Config Hub + color/emoji flair + welcome splash
 v1.0.2 US-first sports reorder + Live TV + Kids sections
