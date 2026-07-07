@@ -134,16 +134,6 @@
       "requires": "plugin.video.umbrella"
     },
     {
-      "label": "Connect Real-Debrid",
-      "run": "auth.realdebrid",
-      "requires": "plugin.video.umbrella"
-    },
-    {
-      "label": "Connect Premiumize",
-      "run": "auth.premiumize",
-      "requires": "plugin.video.umbrella"
-    },
-    {
       "label": "Status \u2014 what's installed / connected",
       "hub": "status"
     },
