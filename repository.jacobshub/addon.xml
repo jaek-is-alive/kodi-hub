@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="repository.jacobshub" name="Jacob's Hub Repository" version="1.0.0" provider-name="jacob">
+<addon id="repository.jacobshub" name="Jake's Config Hub Repository" version="1.0.1" provider-name="jacob">
     <extension point="xbmc.addon.repository" name="Jacob's Hub Repository">
         <dir>
             <info compressed="false">https://jaek-is-alive.github.io/kodi-hub/addons.xml</info>
@@ -8,8 +8,8 @@
         </dir>
     </extension>
     <extension point="xbmc.addon.metadata">
-        <summary lang="en_GB">Personal repository serving Jacob's Hub.</summary>
-        <description lang="en_GB">Auto-update channel for plugin.video.jacobshub, served from GitHub.</description>
+        <summary lang="en_GB">Personal repository serving Jake's Config Hub.</summary>
+        <description lang="en_GB">Auto-update channel for Jake's Config Hub (plugin.video.jacobshub), served from GitHub.</description>
         <platform>all</platform>
         <license>MIT</license>
         <assets>
