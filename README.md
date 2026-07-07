@@ -30,22 +30,23 @@ zips/                       generated artifacts (incl. vendored addons) — comm
 
 ## Installing on a Kodi box
 
-Prereqs (installed normally from their own repos): Umbrella, CocoScrapers, The Loop.
-The hub deep-links into them; it deliberately does **not** declare them as
-dependencies so it installs cleanly anywhere and just greys out missing sections.
+Repo URL: **`https://jaek-is-alive.github.io/kodi-hub/`** (a copy of the repo zip
+is served at `.../kodi-hub/hub.zip` for a short, add-source-friendly path).
 
-1. Download the repository zip to the device:
-   `https://jaek-is-alive.github.io/kodi-hub/repository.jacobshub/repository.jacobshub-1.0.0.zip`
-2. Add-ons → Install from zip file → pick the downloaded zip.
+**Option A — add as a source** (works because the landing page links `hub.zip` at
+the site root, which Kodi's zip browser can read):
+1. Settings → File manager → Add source → `https://jaek-is-alive.github.io/kodi-hub/` → name it `hub`.
+2. Add-ons → Install from zip file → `hub` → `hub.zip`.
 3. Add-ons → Install from repository → Jacob's Hub Repository → Video add-ons → Jacob's Hub.
 
-Note: do **not** add the Pages URL as a Kodi "file source" — GitHub Pages serves
-the landing page for a directory, not a browsable file list, so the zip won't show.
-Just download the zip above. Auto-updates after install don't need a listing: Kodi
-fetches `addons.xml` and each versioned zip by exact URL.
+**Option B — direct download** (fallback / Firestick Downloader app):
+1. Download `https://jaek-is-alive.github.io/kodi-hub/hub.zip` (browser or Downloader app).
+2. Add-ons → Install from zip file → your Downloads folder → `hub.zip`.
+3. Install from repository → Jacob's Hub Repository → Video add-ons → Jacob's Hub.
 
-From then on, bumping the `version=` in `plugin.video.jacobshub/addon.xml` and
-pushing = CI rebuilds `zips/`, redeploys Pages, and every box auto-updates.
+Then open the hub → Tools & Setup → ⚙ Setup to install Umbrella / CocoScrapers /
+The Loop. Enable "Unknown sources" (Settings → System → Add-ons) if prompted.
+Auto-updates after install use exact-URL fetches, no directory listing needed.
 
 ## Backend add-ons (vendored) + the Setup button
 

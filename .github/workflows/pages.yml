@@ -36,6 +36,8 @@ jobs:
           mkdir -p _site
           cp -R zips/. _site/
           cp tools/pages_index.html _site/index.html
+          # short-URL + add-source copy of the repo zip at the site root
+          cp zips/repository.jacobshub/repository.jacobshub-*.zip _site/hub.zip
 
       - uses: actions/configure-pages@v5
 

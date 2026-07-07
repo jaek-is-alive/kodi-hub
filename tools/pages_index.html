@@ -4,26 +4,38 @@
 <title>Jacob's Hub — Kodi repository</title>
 <style>
   :root { color-scheme: light dark; }
-  body { font: 16px/1.6 system-ui, sans-serif; max-width: 640px; margin: 6vh auto; padding: 0 20px; }
+  body { font: 16px/1.6 system-ui, sans-serif; max-width: 660px; margin: 6vh auto; padding: 0 20px; }
   h1 { font-size: 1.6rem; margin-bottom: .2em; }
+  h2 { font-size: 1.1rem; margin-top: 1.6em; }
   code { background: color-mix(in srgb, currentColor 12%, transparent); padding: .15em .4em; border-radius: 5px; font-size: .95em; }
-  .btn { display: inline-block; margin: .6em 0; padding: .7em 1.1em; border: 1px solid color-mix(in srgb, currentColor 30%, transparent); border-radius: 10px; text-decoration: none; font-weight: 600; }
-  ol { padding-left: 1.2em; } li { margin: .4em 0; }
+  .src { display: block; margin: .6em 0; padding: .7em 1em; border: 1px solid color-mix(in srgb, currentColor 25%, transparent); border-radius: 10px; word-break: break-all; font-weight: 600; }
+  .btn { display: inline-block; margin: .5em 0; padding: .7em 1.1em; border: 1px solid color-mix(in srgb, currentColor 30%, transparent); border-radius: 10px; text-decoration: none; font-weight: 600; }
+  ol { padding-left: 1.2em; } li { margin: .35em 0; }
   .muted { opacity: .7; font-size: .9rem; }
 </style>
 <h1>📺 Jacob's Hub</h1>
 <p>Personal Kodi repository — one launcher over Umbrella, The Loop &amp; CocoScrapers.</p>
 
-<p><strong>Install (first time):</strong></p>
+<p><strong>Short repo URL:</strong></p>
+<code class="src"><a href="hub.zip">jaek-is-alive.github.io/kodi-hub/</a></code>
+
+<h2>Option A — Add as a source (Firestick friendly)</h2>
 <ol>
-  <li>On the Kodi device, download the repository zip:<br>
-      <a class="btn" href="repository.jacobshub/repository.jacobshub-1.0.0.zip">⬇ repository.jacobshub-1.0.0.zip</a></li>
-  <li>Kodi → Add-ons → <em>Install from zip file</em> → pick the downloaded zip.</li>
+  <li>Kodi → Settings → File manager → <em>Add source</em> → enter
+      <code>https://jaek-is-alive.github.io/kodi-hub/</code> → name it <code>hub</code>.</li>
+  <li>Add-ons → <em>Install from zip file</em> → <code>hub</code> → pick <code>hub.zip</code>.</li>
   <li>Add-ons → <em>Install from repository</em> → Jacob's Hub Repository → Video add-ons → <strong>Jacob's Hub</strong>.</li>
 </ol>
-<p class="muted">After that, updates are automatic — Kodi pulls new versions from this
-site silently. (No need to add this URL as a "file source"; GitHub Pages doesn't
-list directories, so just use the zip above.)</p>
 
-<p class="muted">Prereqs, installed from their own repos: Umbrella, CocoScrapers, The Loop.
-Source: <a href="https://github.com/jaek-is-alive/kodi-hub">github.com/jaek-is-alive/kodi-hub</a>.</p>
+<h2>Option B — Downloader app / direct file</h2>
+<p>If Option A doesn't list the zip, grab the file directly:</p>
+<a class="btn" href="hub.zip">⬇ hub.zip</a>
+<p class="muted">URL: <code>https://jaek-is-alive.github.io/kodi-hub/hub.zip</code> — paste into the
+Downloader app, then Kodi → Install from zip file → your Downloads folder → <code>hub.zip</code>.</p>
+
+<h2>After install</h2>
+<p>Open Jacob's Hub → <strong>Tools &amp; Setup → ⚙ Setup</strong> to install Umbrella, CocoScrapers
+&amp; The Loop, then say yes to wiring CocoScrapers into Umbrella. Updates are automatic after that.</p>
+
+<p class="muted">Prereqs are handled by Setup. Source:
+<a href="https://github.com/jaek-is-alive/kodi-hub">github.com/jaek-is-alive/kodi-hub</a>.</p>
