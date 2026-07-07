@@ -178,15 +178,16 @@ def open_settings(addon_id):
     xbmc.executebuiltin('Addon.OpenSettings(%s)' % addon_id)
 
 
-def apply_preset(preset_id):
-    """Apply a named settings preset from presets.json across one or more addons."""
+def apply_preset(preset_id, confirm=True):
+    """Apply a named settings preset from presets.json across one or more addons.
+    confirm=False skips the yes/no + post-notice (used by the one-tap Setup flow)."""
     preset = load_json('presets.json').get(preset_id)
     if not preset:
         notify('No preset named "%s"' % preset_id, xbmcgui.NOTIFICATION_ERROR)
         return
     settings = preset.get('settings', {})
     total = sum(len(v) for v in settings.values())
-    if not xbmcgui.Dialog().yesno("Jacob's Hub", '%s\n\nApply %d settings?' %
+    if confirm and not xbmcgui.Dialog().yesno("Jacob's Hub", '%s\n\nApply %d settings?' %
                                   (preset.get('label', preset_id), total)):
         return
     applied, failed = 0, []
@@ -208,7 +209,7 @@ def apply_preset(preset_id):
     if failed:
         msg += ', %d failed (see log)' % len(failed)
     notify(msg)
-    if preset.get('post_notice'):
+    if confirm and preset.get('post_notice'):
         xbmcgui.Dialog().ok("Jacob's Hub", preset['post_notice'])
 
 
@@ -283,8 +284,8 @@ def do_setup():
         if xbmcgui.Dialog().yesno("Jacob's Hub \u2014 Setup",
                                   'Wire CocoScrapers into Umbrella and enable the '
                                   'recommended providers now?'):
-            apply_preset('wire_cocoscrapers')
-            apply_preset('coco_recommended')
+            apply_preset('wire_cocoscrapers', confirm=False)
+            apply_preset('coco_recommended', confirm=False)
 
     summary = 'Installed: %s' % (', '.join(ok) if ok else 'none')
     if failed:
