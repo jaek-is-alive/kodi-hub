@@ -1,12 +1,10 @@
 {
   "_comment": "All upstream addon IDs, URLs and actions live here. Verified against plugin.video.umbrella 6.7.79, script.module.cocoscrapers 1.0.32, plugin.video.the-loop 8.0b (2026-07-06). Fix here if upstream renames things.",
-
   "ids": {
     "umbrella": "plugin.video.umbrella",
     "cocoscrapers": "script.module.cocoscrapers",
     "theloop": "plugin.video.the-loop"
   },
-
   "search": {
     "movies": {
       "title": "Search Movies (Umbrella)",
@@ -22,7 +20,6 @@
       "quote": "path"
     }
   },
-
   "auth": {
     "alldebrid": "plugin://plugin.video.umbrella/?action=ad_Authorize",
     "alldebrid_revoke": "plugin://plugin.video.umbrella/?action=ad_Revoke",
@@ -35,14 +32,12 @@
     "trakt": "plugin://plugin.video.umbrella/?action=traktAuth",
     "trakt_revoke": "plugin://plugin.video.umbrella/?action=traktRevoke"
   },
-
   "accounts": {
     "alldebrid": "plugin://plugin.video.umbrella/?action=ad_AccountInfo",
     "torbox": "plugin://plugin.video.umbrella/?action=tb_AccountInfo",
     "realdebrid": "plugin://plugin.video.umbrella/?action=rd_AccountInfo",
     "premiumize": "plugin://plugin.video.umbrella/?action=pm_AccountInfo"
   },
-
   "maintenance": {
     "umbrella_clear_all": "plugin://plugin.video.umbrella/?action=cache_clearAll",
     "umbrella_clear_providers": "plugin://plugin.video.umbrella/?action=cache_clearSources",
@@ -53,12 +48,35 @@
     "coco_reset_defaults": "plugin://script.module.cocoscrapers/?action=Defaults",
     "loop_clear_cache": "plugin://plugin.video.the-loop/clear_cache"
   },
-
   "debrid_status": {
-    "AllDebrid": {"setting": "alldebridtoken"},
-    "TorBox": {"setting": "torboxtoken"},
-    "Real-Debrid": {"setting": "realdebridtoken"},
-    "Premiumize": {"setting": "premiumizetoken"},
-    "Trakt": {"setting": "trakt.user.token"}
-  }
+    "AllDebrid": {
+      "setting": "alldebridtoken"
+    },
+    "TorBox": {
+      "setting": "torboxtoken"
+    },
+    "Real-Debrid": {
+      "setting": "realdebridtoken"
+    },
+    "Premiumize": {
+      "setting": "premiumizetoken"
+    },
+    "Trakt": {
+      "setting": "trakt.user.token"
+    }
+  },
+  "setup": [
+    {
+      "addon_id": "plugin.video.umbrella",
+      "label": "Umbrella (movies/TV)"
+    },
+    {
+      "addon_id": "script.module.cocoscrapers",
+      "label": "CocoScrapers (scraper engine)"
+    },
+    {
+      "addon_id": "plugin.video.the-loop",
+      "label": "The Loop (live sports)"
+    }
+  ]
 }

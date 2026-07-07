@@ -13,10 +13,11 @@ plugin.video.jacobshub/     the hub addon
   resources/menu.json       WHAT the menus show — edit freely
   resources/targets.json    upstream addon IDs/actions (verified 2026-07-06)
   resources/presets.json    one-tap settings presets (CocoScrapers wiring etc.)
-repository.jacobshub/       repo addon → serves zips/ from raw.githubusercontent.com
+repository.jacobshub/       repo addon → serves zips/ via GitHub Pages
 tools/build_repo.py         zips addons + regenerates zips/addons.xml(.md5)
+tools/vendor.py             downloads backend addons + deps into zips/ (see below)
 tools/make_icon.py          regenerates icon.png/fanart.png (pure stdlib)
-zips/                       generated artifacts — commit them, GitHub serves them
+zips/                       generated artifacts (incl. vendored addons) — commit them
 ```
 
 ## First-time GitHub setup
@@ -45,6 +46,33 @@ fetches `addons.xml` and each versioned zip by exact URL.
 
 From then on, bumping the `version=` in `plugin.video.jacobshub/addon.xml` and
 pushing = CI rebuilds `zips/`, redeploys Pages, and every box auto-updates.
+
+## Backend add-ons (vendored) + the Setup button
+
+This repo doesn't just launch Umbrella / CocoScrapers / The Loop — it **serves**
+them. `tools/vendor.py` downloads those three plus their non-official
+dependencies (ResolveURL, JetExtractors, LoopTV, etc.) into `zips/`, and
+`build_repo.py` lists them all in `addons.xml`, so one repo provides everything.
+
+Anything in the **official Kodi repo** (requests, inputstreamhelper, pyamf,
+dailymotion, googledrive, python.twitch, ...) is deliberately NOT vendored —
+Kodi resolves those automatically at install.
+
+In the addon, **Tools & Setup → ⚙ Setup** installs the three backend add-ons in
+one tap (from this repo + the official repo for the rest), then offers to wire
+CocoScrapers into Umbrella and enable the recommended providers. Kodi may ask you
+to confirm each install.
+
+**Refreshing the vendored versions** (no auto-refresh is set up):
+
+```
+python3 tools/vendor.py       # re-download current upstream versions into zips/
+python3 tools/build_repo.py   # rebuild addons.xml
+git add -A && git commit -m 'refresh vendored addons' && git push
+```
+
+If `vendor.py` lists an addon under MISSING, it's almost always in the official
+Kodi repo (fine — leave it). Only add a source for a genuinely non-official dep.
 
 ## Day-2 editing
 

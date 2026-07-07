@@ -222,6 +222,59 @@ def status_report():
     xbmcgui.Dialog().textviewer("Jacob's Hub — status", '\n'.join(lines))
 
 
+def _install_addon(addon_id, timeout=90):
+    """Ask Kodi to install an addon from an available repo; wait for it to appear.
+    Works because our own repo (already installed) vendors these addons, so Kodi
+    resolves them and their dependencies without any external repo."""
+    if installed(addon_id):
+        xbmc.executebuiltin('EnableAddon(%s)' % addon_id)
+        return True
+    xbmc.executebuiltin('InstallAddon(%s)' % addon_id)
+    for _ in range(timeout):  # InstallAddon is async and may prompt
+        if installed(addon_id):
+            xbmc.executebuiltin('EnableAddon(%s)' % addon_id)
+            return True
+        xbmc.sleep(1000)
+    return installed(addon_id)
+
+
+def do_setup():
+    """One-tap install of the backend addons, served from our own repo, then
+    optionally wire CocoScrapers into Umbrella."""
+    steps = TARGETS.get('setup', [])
+    if not steps:
+        notify('No setup targets configured', xbmcgui.NOTIFICATION_ERROR)
+        return
+    todo = [s for s in steps if not installed(s['addon_id'])]
+    if not todo:
+        xbmcgui.Dialog().ok("Jacob's Hub \u2014 Setup", 'Everything is already installed. \U0001F44D')
+        return
+    names = '\n'.join(' - ' + s.get('label', s['addon_id']) for s in todo)
+    if not xbmcgui.Dialog().yesno("Jacob's Hub \u2014 Setup",
+                                  'Install the backend add-ons?\n\n%s\n\n'
+                                  'Kodi may ask you to confirm each one.' % names):
+        return
+    ok, failed = [], []
+    for s in todo:
+        label = s.get('label', s['addon_id'])
+        notify('Installing %s\u2026' % label)
+        (ok if _install_addon(s['addon_id']) else failed).append(label)
+
+    umb, coco = target('ids.umbrella'), target('ids.cocoscrapers')
+    if installed(umb) and installed(coco):
+        if xbmcgui.Dialog().yesno("Jacob's Hub \u2014 Setup",
+                                  'Wire CocoScrapers into Umbrella and enable the '
+                                  'recommended providers now?'):
+            apply_preset('wire_cocoscrapers')
+            apply_preset('coco_recommended')
+
+    summary = 'Installed: %s' % (', '.join(ok) if ok else 'none')
+    if failed:
+        summary += '\nFailed (try again / check log): %s' % ', '.join(failed)
+    xbmcgui.Dialog().ok("Jacob's Hub \u2014 Setup", summary)
+    xbmc.executebuiltin('Container.Refresh')
+
+
 # ---------------------------------------------------------------------------
 # router
 # ---------------------------------------------------------------------------
@@ -245,6 +298,8 @@ def router():
         apply_preset(params.get('id', ''))
     elif action == 'status':
         status_report()
+    elif action == 'setup':
+        do_setup()
     elif action == 'builtin':
         xbmc.executebuiltin(params.get('cmd', ''))
     elif action == 'missing':
