@@ -9,6 +9,7 @@ import os
 import sys
 import traceback
 import urllib.parse
+import time
 
 import xbmc
 import xbmcaddon
@@ -18,6 +19,7 @@ import xbmcvfs
 
 ADDON = xbmcaddon.Addon()
 ADDON_ID = ADDON.getAddonInfo('id')
+THEATER_NAME = "Jake's Config Hub"
 ADDON_PATH = xbmcvfs.translatePath(ADDON.getAddonInfo('path'))
 HANDLE = int(sys.argv[1])
 BASE_URL = sys.argv[0]
@@ -77,6 +79,18 @@ def notify(msg, icon=xbmcgui.NOTIFICATION_INFO, time=4000):
     xbmcgui.Dialog().notification("Jacob's Hub", msg, icon, time)
 
 
+def welcome_splash():
+    """A quick branded, time-aware hello when the hub's home screen opens."""
+    h = time.localtime().tm_hour
+    if h < 5:    greet = 'Burning the midnight oil'
+    elif h < 12: greet = 'Good morning'
+    elif h < 17: greet = 'Good afternoon'
+    elif h < 22: greet = 'Good evening'
+    else:        greet = 'Winding down'
+    xbmcgui.Dialog().notification('\U0001F37F ' + THEATER_NAME, greet + ', family!',
+                                  ICON, 3500)
+
+
 # ---------------------------------------------------------------------------
 # directory building
 # ---------------------------------------------------------------------------
@@ -90,6 +104,9 @@ def add_item(label, url, is_folder, art=None, plot=None):
 
 
 def render_menu(menu_id):
+    xbmcplugin.setPluginCategory(HANDLE, THEATER_NAME)
+    if menu_id == 'root':
+        welcome_splash()
     items = MENU.get(menu_id)
     if items is None:
         notify('No menu named "%s" in menu.json' % menu_id, xbmcgui.NOTIFICATION_ERROR)

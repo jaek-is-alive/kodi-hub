@@ -1,35 +1,35 @@
 {
   "root": [
     {
-      "label": "Movies",
+      "label": "[COLOR gold]🎬 Movies[/COLOR]",
       "path": "plugin://plugin.video.umbrella/?action=movieNavigator",
       "requires": "plugin.video.umbrella"
     },
     {
-      "label": "TV Shows",
+      "label": "[COLOR deepskyblue]📺 TV Shows[/COLOR]",
       "path": "plugin://plugin.video.umbrella/?action=tvNavigator",
       "requires": "plugin.video.umbrella"
     },
     {
-      "label": "Search",
+      "label": "[COLOR white]🔎 Search[/COLOR]",
       "menu": "search"
     },
     {
-      "label": "Live Sports",
+      "label": "[COLOR lawngreen]🏈 Live Sports[/COLOR]",
       "menu": "sports",
       "requires": "plugin.video.the-loop"
     },
     {
-      "label": "Live TV",
+      "label": "[COLOR dodgerblue]📡 Live TV[/COLOR]",
       "menu": "livetv",
       "requires": "plugin.video.the-loop"
     },
     {
-      "label": "Kids",
+      "label": "[COLOR yellow]🧸 Kids[/COLOR]",
       "menu": "kids"
     },
     {
-      "label": "Tools & Setup",
+      "label": "[COLOR khaki]🛠️ Tools & Setup[/COLOR]",
       "menu": "tools"
     }
   ],

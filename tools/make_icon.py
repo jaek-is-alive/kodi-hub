@@ -79,14 +79,18 @@ def make_icon(path, size=512):
 
 
 def make_fanart(path, w=1280, h=720):
+    # playful multi-color "spotlight" bands over the dark gradient
+    bands = [((243, 178, 71), 0.30), ((86, 156, 214), 0.55), ((120, 200, 120), 0.80)]
     rows = []
     for y in range(h):
         row = []
         base = lerp(BG_TOP, BG_BOT, y / h)
         for x in range(w):
-            # subtle diagonal accent band
-            d = abs((x - w * 0.78) - (y - h * 0.5) * 0.6)
-            c = lerp(ACCENT, base, min(1.0, d / (w * 0.25))) if d < w * 0.25 else base
+            c = base
+            for color, cx in bands:
+                d = abs((x - w * cx) - (y - h * 0.5) * 0.5)
+                if d < w * 0.10:
+                    c = lerp(color, c, min(1.0, d / (w * 0.10)))
             row.extend(c)
         rows.append(row)
     png_write(path, w, h, rows)
