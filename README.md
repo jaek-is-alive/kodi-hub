@@ -33,13 +33,18 @@ Prereqs (installed normally from their own repos): Umbrella, CocoScrapers, The L
 The hub deep-links into them; it deliberately does **not** declare them as
 dependencies so it installs cleanly anywhere and just greys out missing sections.
 
-1. Settings → File manager → Add source → `https://jaek-is-alive.github.io/kodi-hub/`
-   (or just download `zips/repository.jacobshub/repository.jacobshub-1.0.0.zip`).
-2. Add-ons → Install from zip → the repository zip.
+1. Download the repository zip to the device:
+   `https://jaek-is-alive.github.io/kodi-hub/repository.jacobshub/repository.jacobshub-1.0.0.zip`
+2. Add-ons → Install from zip file → pick the downloaded zip.
 3. Add-ons → Install from repository → Jacob's Hub Repository → Video add-ons → Jacob's Hub.
 
-From then on, bumping the `version=` in `plugin.video.jacobshub/addon.xml`, running
-`tools/build_repo.py`, and pushing = auto-update on every box.
+Note: do **not** add the Pages URL as a Kodi "file source" — GitHub Pages serves
+the landing page for a directory, not a browsable file list, so the zip won't show.
+Just download the zip above. Auto-updates after install don't need a listing: Kodi
+fetches `addons.xml` and each versioned zip by exact URL.
+
+From then on, bumping the `version=` in `plugin.video.jacobshub/addon.xml` and
+pushing = CI rebuilds `zips/`, redeploys Pages, and every box auto-updates.
 
 ## Day-2 editing
 

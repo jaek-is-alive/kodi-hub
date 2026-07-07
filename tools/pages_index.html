@@ -7,21 +7,23 @@
   body { font: 16px/1.6 system-ui, sans-serif; max-width: 640px; margin: 6vh auto; padding: 0 20px; }
   h1 { font-size: 1.6rem; margin-bottom: .2em; }
   code { background: color-mix(in srgb, currentColor 12%, transparent); padding: .15em .4em; border-radius: 5px; font-size: .95em; }
-  .src { display: block; margin: .6em 0; padding: .7em 1em; border: 1px solid color-mix(in srgb, currentColor 25%, transparent); border-radius: 10px; word-break: break-all; }
+  .btn { display: inline-block; margin: .6em 0; padding: .7em 1.1em; border: 1px solid color-mix(in srgb, currentColor 30%, transparent); border-radius: 10px; text-decoration: none; font-weight: 600; }
   ol { padding-left: 1.2em; } li { margin: .4em 0; }
   .muted { opacity: .7; font-size: .9rem; }
 </style>
 <h1>📺 Jacob's Hub</h1>
 <p>Personal Kodi repository — one launcher over Umbrella, The Loop &amp; CocoScrapers.</p>
 
-<p><strong>File source URL</strong> (Settings → File manager → Add source):</p>
-<code class="src">https://jaek-is-alive.github.io/kodi-hub/</code>
-
+<p><strong>Install (first time):</strong></p>
 <ol>
-  <li>Add the URL above as a source (name it <code>hub</code>).</li>
-  <li>Add-ons → <em>Install from zip file</em> → <code>hub</code> → the <code>repository.jacobshub</code> zip.</li>
+  <li>On the Kodi device, download the repository zip:<br>
+      <a class="btn" href="repository.jacobshub/repository.jacobshub-1.0.0.zip">⬇ repository.jacobshub-1.0.0.zip</a></li>
+  <li>Kodi → Add-ons → <em>Install from zip file</em> → pick the downloaded zip.</li>
   <li>Add-ons → <em>Install from repository</em> → Jacob's Hub Repository → Video add-ons → <strong>Jacob's Hub</strong>.</li>
 </ol>
+<p class="muted">After that, updates are automatic — Kodi pulls new versions from this
+site silently. (No need to add this URL as a "file source"; GitHub Pages doesn't
+list directories, so just use the zip above.)</p>
 
-<p class="muted">Prereqs installed from their own repos: Umbrella, CocoScrapers, The Loop.
-Auto-updates after that are silent. Source: <a href="https://github.com/jaek-is-alive/kodi-hub">github.com/jaek-is-alive/kodi-hub</a>.</p>
+<p class="muted">Prereqs, installed from their own repos: Umbrella, CocoScrapers, The Loop.
+Source: <a href="https://github.com/jaek-is-alive/kodi-hub">github.com/jaek-is-alive/kodi-hub</a>.</p>
