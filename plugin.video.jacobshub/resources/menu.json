@@ -292,6 +292,33 @@
   ],
   "pinned": [
     {
+      "label": "[COLOR gold]🎮 Games & Gaming Movies[/COLOR]",
+      "menu": "pin_games",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR gold]🧸 Little Kids[/COLOR]",
+      "menu": "pin_toddler",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR gold]💥 Action & Adventure[/COLOR]",
+      "menu": "pin_action",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR gold]✨ Tween Picks[/COLOR]",
+      "menu": "pin_tween",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR gold]🍿 Family Movie Night[/COLOR]",
+      "menu": "pin_family",
+      "requires": "plugin.video.umbrella"
+    }
+  ],
+  "pin_games": [
+    {
       "label": "[COLOR gold]📌 Pokémon[/COLOR]",
       "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Pokemon",
       "requires": "plugin.video.umbrella"
@@ -325,15 +352,153 @@
       "label": "[COLOR gold]📌 LEGO[/COLOR]",
       "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Lego",
       "requires": "plugin.video.umbrella"
-    },
-    {
-      "label": "[COLOR gold]📌 Paw Patrol[/COLOR]",
-      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Paw+Patrol",
-      "requires": "plugin.video.umbrella"
-    },
+    }
+  ],
+  "pin_toddler": [
     {
       "label": "[COLOR gold]📌 Bluey (TV)[/COLOR]",
       "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Bluey",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR gold]📌 Paw Patrol (TV)[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Paw+Patrol",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR gold]📌 Cocomelon (TV)[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Cocomelon",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR gold]📌 Peppa Pig (TV)[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Peppa+Pig",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR gold]📌 Gabby's Dollhouse (TV)[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Gabbys+Dollhouse",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR gold]📌 Sesame Street (TV)[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Sesame+Street",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR gold]📌 Mickey Mouse Clubhouse (TV)[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Mickey+Mouse+Clubhouse",
+      "requires": "plugin.video.umbrella"
+    }
+  ],
+  "pin_action": [
+    {
+      "label": "[COLOR gold]📌 Marvel[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Marvel",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR gold]📌 Spider-Man[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Spider-Man",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR gold]📌 Star Wars[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Star+Wars",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR gold]📌 Jurassic World[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Jurassic+World",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR gold]📌 How to Train Your Dragon[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=How+to+Train+Your+Dragon",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR gold]📌 Teenage Mutant Ninja Turtles[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Teenage+Mutant+Ninja+Turtles",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR gold]📌 Ninjago (TV)[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Ninjago",
+      "requires": "plugin.video.umbrella"
+    }
+  ],
+  "pin_tween": [
+    {
+      "label": "[COLOR gold]📌 Harry Potter[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Harry+Potter",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR gold]📌 Percy Jackson[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Percy+Jackson",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR gold]📌 Descendants[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Descendants",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR gold]📌 Wednesday (TV)[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Wednesday",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR gold]📌 Avatar: The Last Airbender (TV)[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Avatar+The+Last+Airbender",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR gold]📌 Miraculous Ladybug (TV)[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Miraculous",
+      "requires": "plugin.video.umbrella"
+    }
+  ],
+  "pin_family": [
+    {
+      "label": "[COLOR gold]📌 Encanto[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Encanto",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR gold]📌 Moana[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Moana",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR gold]📌 Frozen[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Frozen",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR gold]📌 Inside Out[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Inside+Out",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR gold]📌 Despicable Me[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Despicable+Me",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR gold]📌 Minions[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Minions",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR gold]📌 Jumanji[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Jumanji",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR gold]📌 Trolls[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Trolls",
       "requires": "plugin.video.umbrella"
     }
   ]

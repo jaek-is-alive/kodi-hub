@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.jacobshub" name="Jake's Config Hub" version="1.0.12" provider-name="jacob">
+<addon id="plugin.video.jacobshub" name="Jake's Config Hub" version="1.0.13" provider-name="jacob">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
     </requires>
@@ -15,7 +15,8 @@
             <icon>icon.png</icon>
             <fanart>fanart.png</fanart>
         </assets>
-        <news>v1.0.12 Pokémon pins + dedicated top-level Pinned menu
+        <news>v1.0.13 more pins by age (toddler/boy/girl/family), organized into categories
+v1.0.12 Pokémon pins + dedicated top-level Pinned menu
 v1.0.11 pinned searches (Zelda/Mario/Minecraft) in Search
 v1.0.10 Surprise Sport now only picks a sport with a game live right now
 v1.0.9 new logo (CEO of Chill 🐶🕶️)
