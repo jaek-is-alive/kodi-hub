@@ -34,6 +34,11 @@
       "requires": "plugin.video.umbrella"
     },
     {
+      "label": "[COLOR violet]💜 Marissa's Watch List[/COLOR]",
+      "menu": "marissa",
+      "requires": "plugin.video.umbrella"
+    },
+    {
       "label": "[COLOR orange]🎲 Surprise Movie[/COLOR]",
       "hub": "surprise",
       "params": {
@@ -499,6 +504,148 @@
     {
       "label": "[COLOR gold]📌 Trolls[/COLOR]",
       "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Trolls",
+      "requires": "plugin.video.umbrella"
+    }
+  ],
+  "marissa": [
+    {
+      "label": "[COLOR violet]📺 Love Island — June 2[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Love+Island",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR violet]📺 Heated Rivalry[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Heated+Rivalry",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR violet]📺 Off Campus[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Off+Campus",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR violet]📺 Running Point[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Running+Point",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR violet]📺 Derry Girls[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Derry+Girls",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR violet]🎬 Your Fault: London[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=My+Fault+London",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR violet]📺 Ted Lasso — new season Aug 5[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Ted+Lasso",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR violet]🎬 Ready or Not 2[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Ready+or+Not",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR violet]🎬 Project Hail Mary[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Project+Hail+Mary",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR violet]🎬 Lord of the Flies[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Lord+of+the+Flies",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR violet]📺 Scrubs[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Scrubs",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR violet]📺 Shrinking[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Shrinking",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR violet]📺 Euphoria[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Euphoria",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR violet]🎬 Super Mario[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Super+Mario+Bros",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR violet]📺 Temptation Island[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Temptation+Island",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR violet]📺 Perfect Match — May 20[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Perfect+Match",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR violet]📺 Rivals (Hulu)[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Rivals",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR violet]📺 House of the Dragon — June 21[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=House+of+the+Dragon",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR violet]🎬 Roommates[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Roommates",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR violet]🎬 Apex[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Apex",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR violet]🎬 Set It Up[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Set+It+Up",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR violet]📺 The Last of Us[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=The+Last+of+Us",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR violet]📺 Yellowstone[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Yellowstone",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR violet]📺 Outlander[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Outlander",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR violet]🎬 Cleaner[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Cleaner",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR violet]📺 A Good Girl's Guide to Murder[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=A+Good+Girls+Guide+to+Murder",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR violet]📺 The Great[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=The+Great",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR violet]📺 Normal People[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Normal+People",
       "requires": "plugin.video.umbrella"
     }
   ]
