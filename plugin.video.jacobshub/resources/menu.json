@@ -117,6 +117,21 @@
   ],
   "search": [
     {
+      "label": "[COLOR gold]📌 Zelda[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Zelda",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR gold]📌 Mario[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Mario",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR gold]📌 Minecraft[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Minecraft",
+      "requires": "plugin.video.umbrella"
+    },
+    {
       "label": "Search Movies…",
       "hub": "search",
       "params": {
