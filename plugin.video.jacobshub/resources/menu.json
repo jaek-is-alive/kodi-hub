@@ -34,6 +34,10 @@
       "requires": "plugin.video.umbrella"
     },
     {
+      "label": "[COLOR turquoise]🔥 Top by Service[/COLOR]",
+      "menu": "services"
+    },
+    {
       "label": "[COLOR violet]💜 Marissa's Watch List[/COLOR]",
       "menu": "marissa",
       "requires": "plugin.video.umbrella"
@@ -646,6 +650,1344 @@
     {
       "label": "[COLOR violet]📺 Normal People[/COLOR]",
       "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Normal+People",
+      "requires": "plugin.video.umbrella"
+    }
+  ],
+  "services": [
+    {
+      "label": "[COLOR turquoise]🔴 Netflix (57)[/COLOR]",
+      "menu": "svc_netflix",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR turquoise]🟢 Hulu (41)[/COLOR]",
+      "menu": "svc_hulu",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR turquoise]🟣 Max (35)[/COLOR]",
+      "menu": "svc_max",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR turquoise]🏰 Disney+ (30)[/COLOR]",
+      "menu": "svc_disney",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR turquoise]📦 Prime Video (33)[/COLOR]",
+      "menu": "svc_prime",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR turquoise]🍎 Apple TV+ (22)[/COLOR]",
+      "menu": "svc_apple",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR turquoise]⛰️ Paramount+ (20)[/COLOR]",
+      "menu": "svc_paramount",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR turquoise]🦚 Peacock (18)[/COLOR]",
+      "menu": "svc_peacock",
+      "requires": "plugin.video.umbrella"
+    }
+  ],
+  "svc_netflix": [
+    {
+      "label": "📺 Stranger Things",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Stranger+Things",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Wednesday",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Wednesday",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Squid Game",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Squid+Game",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Bridgerton",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Bridgerton",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 The Crown",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=The+Crown",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Money Heist",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Money+Heist",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Cobra Kai",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Cobra+Kai",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Ozark",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Ozark",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 You",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=You",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 The Witcher",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=The+Witcher",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Lupin",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Lupin",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Monster",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Monster",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 The Night Agent",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=The+Night+Agent",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 The Diplomat",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=The+Diplomat",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Emily in Paris",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Emily+in+Paris",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Outer Banks",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Outer+Banks",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Sex Education",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Sex+Education",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Ginny & Georgia",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Ginny+%26+Georgia",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 The Umbrella Academy",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=The+Umbrella+Academy",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 The Queen's Gambit",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=The+Queen%27s+Gambit",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Baby Reindeer",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Baby+Reindeer",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 One Piece",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=One+Piece",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Avatar: The Last Airbender",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Avatar%3A+The+Last+Airbender",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 3 Body Problem",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=3+Body+Problem",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Adolescence",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Adolescence",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 The Lincoln Lawyer",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=The+Lincoln+Lawyer",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Love Is Blind",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Love+Is+Blind",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Arcane",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Arcane",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Black Mirror",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Black+Mirror",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Nobody Wants This",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Nobody+Wants+This",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Fool Me Once",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Fool+Me+Once",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Beef",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Beef",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Griselda",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Griselda",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Selling Sunset",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Selling+Sunset",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Glass Onion",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Glass+Onion",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Wake Up Dead Man: A Knives Out Mystery",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Wake+Up+Dead+Man%3A+A+Knives+Out+Mystery",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 KPop Demon Hunters",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=KPop+Demon+Hunters",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Rebel Ridge",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Rebel+Ridge",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Carry-On",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Carry-On",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Damsel",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Damsel",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 The Gray Man",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=The+Gray+Man",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Red Notice",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Red+Notice",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Don't Look Up",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Don%27t+Look+Up",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Bird Box",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Bird+Box",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Extraction",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Extraction",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Extraction 2",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Extraction+2",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 The Adam Project",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=The+Adam+Project",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Leave the World Behind",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Leave+the+World+Behind",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Society of the Snow",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Society+of+the+Snow",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Emilia Pérez",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Emilia+P%C3%A9rez",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 All Quiet on the Western Front",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=All+Quiet+on+the+Western+Front",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Hit Man",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Hit+Man",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 The Electric State",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=The+Electric+State",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Enola Holmes",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Enola+Holmes",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Enola Holmes 3",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Enola+Holmes+3",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Happy Gilmore 2",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Happy+Gilmore+2",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Rebel Moon",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Rebel+Moon",
+      "requires": "plugin.video.umbrella"
+    }
+  ],
+  "svc_hulu": [
+    {
+      "label": "📺 The Bear",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=The+Bear",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Only Murders in the Building",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Only+Murders+in+the+Building",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 The Handmaid's Tale",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=The+Handmaid%27s+Tale",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Shōgun",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Sh%C5%8Dgun",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 The Kardashians",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=The+Kardashians",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Abbott Elementary",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Abbott+Elementary",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 The Rookie",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=The+Rookie",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Grey's Anatomy",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Grey%27s+Anatomy",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Family Guy",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Family+Guy",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Bob's Burgers",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Bob%27s+Burgers",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 It's Always Sunny in Philadelphia",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=It%27s+Always+Sunny+in+Philadelphia",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 American Horror Story",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=American+Horror+Story",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Fargo",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Fargo",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Reservation Dogs",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Reservation+Dogs",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Nine Perfect Strangers",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Nine+Perfect+Strangers",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Wonder Man",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Wonder+Man",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 The Testaments",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=The+Testaments",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Under the Bridge",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Under+the+Bridge",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Paradise",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Paradise",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Dying for Sex",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Dying+for+Sex",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Interior Chinatown",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Interior+Chinatown",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Futurama",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Futurama",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 King of the Hill",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=King+of+the+Hill",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Modern Family",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Modern+Family",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 This Is Us",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=This+Is+Us",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Welcome to Wrexham",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Welcome+to+Wrexham",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Prey",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Prey",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 No One Will Save You",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=No+One+Will+Save+You",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Palm Springs",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Palm+Springs",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Titanic",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Titanic",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Ready or Not",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Ready+or+Not",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Poor Things",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Poor+Things",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Nightmare Alley",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Nightmare+Alley",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 The Menu",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=The+Menu",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Bottoms",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Bottoms",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Fresh",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Fresh",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Vacation Friends",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Vacation+Friends",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Quiz Lady",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Quiz+Lady",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Predator: Killer of Killers",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Predator%3A+Killer+of+Killers",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Kingdom of the Planet of the Apes",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Kingdom+of+the+Planet+of+the+Apes",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Alien: Romulus",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Alien%3A+Romulus",
+      "requires": "plugin.video.umbrella"
+    }
+  ],
+  "svc_max": [
+    {
+      "label": "📺 The Last of Us",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=The+Last+of+Us",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 House of the Dragon",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=House+of+the+Dragon",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 The White Lotus",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=The+White+Lotus",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Game of Thrones",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Game+of+Thrones",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Succession",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Succession",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Euphoria",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Euphoria",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 True Detective",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=True+Detective",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 The Penguin",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=The+Penguin",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 IT: Welcome to Derry",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=IT%3A+Welcome+to+Derry",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Curb Your Enthusiasm",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Curb+Your+Enthusiasm",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 The Sopranos",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=The+Sopranos",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Barry",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Barry",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Chernobyl",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Chernobyl",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Westworld",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Westworld",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 The Wire",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=The+Wire",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Peacemaker",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Peacemaker",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 The Gilded Age",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=The+Gilded+Age",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Dune",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Dune",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Dune: Part Two",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Dune%3A+Part+Two",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Sinners",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Sinners",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 A Minecraft Movie",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=A+Minecraft+Movie",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Barbie",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Barbie",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 The Batman",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=The+Batman",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Joker",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Joker",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Wonka",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Wonka",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Elvis",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Elvis",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Weapons",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Weapons",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 One Battle After Another",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=One+Battle+After+Another",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 The Lord of the Rings: The Fellowship of the Ring",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=The+Lord+of+the+Rings%3A+The+Fellowship+of+the+Ring",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Harry Potter and the Sorcerer's Stone",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Harry+Potter+and+the+Sorcerer%27s+Stone",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Mad Max: Fury Road",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Mad+Max%3A+Fury+Road",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 The Matrix",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=The+Matrix",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Godzilla vs. Kong",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Godzilla+vs.+Kong",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 John Wick",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=John+Wick",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Wuthering Heights",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Wuthering+Heights",
+      "requires": "plugin.video.umbrella"
+    }
+  ],
+  "svc_disney": [
+    {
+      "label": "📺 The Mandalorian",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=The+Mandalorian",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Andor",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Andor",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Ahsoka",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Ahsoka",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Loki",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Loki",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 WandaVision",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=WandaVision",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 The Falcon and the Winter Soldier",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=The+Falcon+and+the+Winter+Soldier",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Hawkeye",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Hawkeye",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Ms. Marvel",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Ms.+Marvel",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Moon Knight",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Moon+Knight",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Obi-Wan Kenobi",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Obi-Wan+Kenobi",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 The Book of Boba Fett",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=The+Book+of+Boba+Fett",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Skeleton Crew",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Skeleton+Crew",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 X-Men '97",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=X-Men+%2797",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Bluey",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Bluey",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 The Acolyte",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=The+Acolyte",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Agatha All Along",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Agatha+All+Along",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Star Wars: The Bad Batch",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Star+Wars%3A+The+Bad+Batch",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Moana",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Moana",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Frozen",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Frozen",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Encanto",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Encanto",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Avengers: Endgame",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Avengers%3A+Endgame",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Coco",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Coco",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Inside Out 2",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Inside+Out+2",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Toy Story",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Toy+Story",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 The Lion King",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=The+Lion+King",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Hamilton",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Hamilton",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Deadpool & Wolverine",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Deadpool+%26+Wolverine",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Guardians of the Galaxy Vol. 3",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Guardians+of+the+Galaxy+Vol.+3",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Elemental",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Elemental",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Turning Red",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Turning+Red",
+      "requires": "plugin.video.umbrella"
+    }
+  ],
+  "svc_prime": [
+    {
+      "label": "📺 The Boys",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=The+Boys",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Reacher",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Reacher",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Fallout",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Fallout",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 The Lord of the Rings: The Rings of Power",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=The+Lord+of+the+Rings%3A+The+Rings+of+Power",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Tom Clancy's Jack Ryan",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Tom+Clancy%27s+Jack+Ryan",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 The Terminal List",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=The+Terminal+List",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Cross",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Cross",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Gen V",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Gen+V",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Invincible",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Invincible",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 The Marvelous Mrs. Maisel",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=The+Marvelous+Mrs.+Maisel",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Fleabag",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Fleabag",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 The Wheel of Time",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=The+Wheel+of+Time",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Bosch",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Bosch",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Spider-Noir",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Spider-Noir",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Citadel",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Citadel",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Upload",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Upload",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 The Summer I Turned Pretty",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=The+Summer+I+Turned+Pretty",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Jury Duty",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Jury+Duty",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Road House",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Road+House",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Project Hail Mary",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Project+Hail+Mary",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Saltburn",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Saltburn",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Air",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Air",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 The Tomorrow War",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=The+Tomorrow+War",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Argylle",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Argylle",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Red One",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Red+One",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 The Big Sick",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=The+Big+Sick",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Sound of Metal",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Sound+of+Metal",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Manchester by the Sea",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Manchester+by+the+Sea",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Coming 2 America",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Coming+2+America",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Borat Subsequent Moviefilm",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Borat+Subsequent+Moviefilm",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 My Spy",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=My+Spy",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 The Idea of You",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=The+Idea+of+You",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Creed",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Creed",
+      "requires": "plugin.video.umbrella"
+    }
+  ],
+  "svc_apple": [
+    {
+      "label": "📺 Severance",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Severance",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Ted Lasso",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Ted+Lasso",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Silo",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Silo",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Slow Horses",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Slow+Horses",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Shrinking",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Shrinking",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 The Morning Show",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=The+Morning+Show",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Foundation",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Foundation",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 For All Mankind",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=For+All+Mankind",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 The Studio",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=The+Studio",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Pluribus",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Pluribus",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Your Friends & Neighbors",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Your+Friends+%26+Neighbors",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Sugar",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Sugar",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Monarch: Legacy of Monsters",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Monarch%3A+Legacy+of+Monsters",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Drops of God",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Drops+of+God",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Bad Sisters",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Bad+Sisters",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Presumed Innocent",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Presumed+Innocent",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Lessons in Chemistry",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Lessons+in+Chemistry",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 CODA",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=CODA",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Killers of the Flower Moon",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Killers+of+the+Flower+Moon",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Napoleon",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Napoleon",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Wolfs",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Wolfs",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Still: A Michael J. Fox Movie",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Still%3A+A+Michael+J.+Fox+Movie",
+      "requires": "plugin.video.umbrella"
+    }
+  ],
+  "svc_paramount": [
+    {
+      "label": "📺 Yellowstone",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Yellowstone",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 1883",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=1883",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 1923",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=1923",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Tulsa King",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Tulsa+King",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Landman",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Landman",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Mayor of Kingstown",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Mayor+of+Kingstown",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Special Ops: Lioness",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Special+Ops%3A+Lioness",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Star Trek: Strange New Worlds",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Star+Trek%3A+Strange+New+Worlds",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Star Trek: Discovery",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Star+Trek%3A+Discovery",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Star Trek: Lower Decks",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Star+Trek%3A+Lower+Decks",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Star Trek: Picard",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Star+Trek%3A+Picard",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Criminal Minds: Evolution",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Criminal+Minds%3A+Evolution",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Dexter: Original Sin",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Dexter%3A+Original+Sin",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Top Gun: Maverick",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Top+Gun%3A+Maverick",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Sonic the Hedgehog",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Sonic+the+Hedgehog",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Sonic the Hedgehog 2",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Sonic+the+Hedgehog+2",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Sonic the Hedgehog 3",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Sonic+the+Hedgehog+3",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 A Quiet Place",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=A+Quiet+Place",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Gladiator II",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Gladiator+II",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Mission: Impossible - Dead Reckoning",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Mission%3A+Impossible+-+Dead+Reckoning",
+      "requires": "plugin.video.umbrella"
+    }
+  ],
+  "svc_peacock": [
+    {
+      "label": "📺 The Office",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=The+Office",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Poker Face",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Poker+Face",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Love Island USA",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Love+Island+USA",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 The Traitors",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=The+Traitors",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Bel-Air",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Bel-Air",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Parks and Recreation",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Parks+and+Recreation",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Ted",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Ted",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Married at First Sight",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Married+at+First+Sight",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 The Capture",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=The+Capture",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Saturday Night Live",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Saturday+Night+Live",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Based on a True Story",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Based+on+a+True+Story",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "📺 Days of Our Lives",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Days+of+Our+Lives",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Twisters",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Twisters",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Oppenheimer",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Oppenheimer",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Wicked",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Wicked",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Migration",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Migration",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 The Killer",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=The+Killer",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "🎬 Nope",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Nope",
       "requires": "plugin.video.umbrella"
     }
   ]
