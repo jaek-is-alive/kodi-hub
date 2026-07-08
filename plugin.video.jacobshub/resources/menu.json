@@ -29,6 +29,11 @@
       "menu": "kids"
     },
     {
+      "label": "[COLOR gold]📌 Pinned[/COLOR]",
+      "menu": "pinned",
+      "requires": "plugin.video.umbrella"
+    },
+    {
       "label": "[COLOR orange]🎲 Surprise Movie[/COLOR]",
       "hub": "surprise",
       "params": {
@@ -116,21 +121,6 @@
     }
   ],
   "search": [
-    {
-      "label": "[COLOR gold]📌 Zelda[/COLOR]",
-      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Zelda",
-      "requires": "plugin.video.umbrella"
-    },
-    {
-      "label": "[COLOR gold]📌 Mario[/COLOR]",
-      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Mario",
-      "requires": "plugin.video.umbrella"
-    },
-    {
-      "label": "[COLOR gold]📌 Minecraft[/COLOR]",
-      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Minecraft",
-      "requires": "plugin.video.umbrella"
-    },
     {
       "label": "Search Movies…",
       "hub": "search",
@@ -297,6 +287,53 @@
       "params": {
         "kind": "movies"
       },
+      "requires": "plugin.video.umbrella"
+    }
+  ],
+  "pinned": [
+    {
+      "label": "[COLOR gold]📌 Pokémon[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Pokemon",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR gold]📌 Pokémon (TV)[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Pokemon",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR gold]📌 Zelda[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Zelda",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR gold]📌 Mario[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Mario",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR gold]📌 Minecraft[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Minecraft",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR gold]📌 Sonic[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Sonic",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR gold]📌 LEGO[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Lego",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR gold]📌 Paw Patrol[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=movieSearchterm&name=Paw+Patrol",
+      "requires": "plugin.video.umbrella"
+    },
+    {
+      "label": "[COLOR gold]📌 Bluey (TV)[/COLOR]",
+      "path": "plugin://plugin.video.umbrella/?action=tvSearchterm&name=Bluey",
       "requires": "plugin.video.umbrella"
     }
   ]
