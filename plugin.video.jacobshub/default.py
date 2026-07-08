@@ -251,7 +251,7 @@ def status_report():
             connected = bool(val) and val not in ('', 'false')
             lines.append('%s: %s' % (svc, '[COLOR green]connected[/COLOR]' if connected
                                      else 'not connected'))
-    xbmcgui.Dialog().textviewer("Jacob's Hub — status", '\n'.join(lines))
+    xbmcgui.Dialog().textviewer(THEATER_NAME + ' — status', '\n'.join(lines))
 
 
 def _install_addon(addon_id, timeout=90):
