@@ -1,9 +1,13 @@
 # kodi-hub
 
-Personal Kodi setup: **Jacob's Hub** (`plugin.video.jacobshub`) — one addon that fronts
+Personal Kodi setup: **Jake's Config Hub** (`plugin.video.jacobshub`) — one addon that fronts
 Umbrella + The Loop with combined menus, one-tap search, debrid connect buttons, and
 CocoScrapers auto-configuration — plus a personal repository addon so it auto-updates
 from this GitHub repo.
+
+> **Maintainer notes / resume guide:** the full project write-up (architecture,
+> the change→build→push loop, technical gotchas, and next-ideas) lives in Obsidian →
+> `Projects/Personal/Jake's Config Hub (Kodi)`. Start there when picking this back up.
 
 ## Layout
 
