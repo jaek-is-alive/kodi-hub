@@ -153,96 +153,30 @@
   ],
   "tools": [
     {
-      "label": "[B]⚙ Setup — install Umbrella, CocoScrapers & The Loop[/B]",
+      "label": "[B]⚙ Setup — install & configure everything[/B]",
       "hub": "setup",
-      "plot": "Installs the backend add-ons (and their dependencies) from this repo, then offers to wire CocoScrapers into Umbrella."
+      "plot": "Installs Umbrella, CocoScrapers & The Loop from this repo, then configures CocoScrapers for Umbrella. Safe to run again anytime."
     },
     {
       "label": "[B]Connect AllDebrid[/B]",
       "run": "auth.alldebrid",
       "requires": "plugin.video.umbrella",
-      "plot": "Starts Umbrella's AllDebrid device-code auth flow."
+      "plot": "Shows a code to link your AllDebrid account."
     },
     {
       "label": "[B]Connect TorBox[/B]",
       "run": "auth.torbox",
       "requires": "plugin.video.umbrella",
-      "plot": "Starts Umbrella's TorBox auth flow."
-    },
-    {
-      "label": "Connect Trakt",
-      "run": "auth.trakt",
-      "requires": "plugin.video.umbrella"
+      "plot": "Shows a code to link your TorBox account."
     },
     {
       "label": "Status — what's installed / connected",
       "hub": "status"
     },
     {
-      "label": "[B]Auto-configure CocoScrapers[/B] (wire into Umbrella)",
-      "hub": "preset",
-      "params": {
-        "id": "wire_cocoscrapers"
-      },
-      "requires": "plugin.video.umbrella",
-      "plot": "Points Umbrella's external provider at script.module.cocoscrapers and sets a sane scrape timeout."
-    },
-    {
-      "label": "Apply recommended CocoScrapers providers",
-      "hub": "preset",
-      "params": {
-        "id": "coco_recommended"
-      },
-      "requires": "script.module.cocoscrapers"
-    },
-    {
-      "label": "AllDebrid account info",
-      "run": "accounts.alldebrid",
-      "requires": "plugin.video.umbrella"
-    },
-    {
-      "label": "TorBox account info",
-      "run": "accounts.torbox",
-      "requires": "plugin.video.umbrella"
-    },
-    {
-      "label": "Umbrella settings",
-      "hub": "settings",
-      "params": {
-        "id": "plugin.video.umbrella"
-      }
-    },
-    {
-      "label": "CocoScrapers settings",
-      "run": "maintenance.coco_settings",
-      "requires": "script.module.cocoscrapers"
-    },
-    {
-      "label": "The Loop settings",
-      "hub": "settings",
-      "params": {
-        "id": "plugin.video.the-loop"
-      }
-    },
-    {
-      "label": "Force Trakt sync (Umbrella)",
-      "run": "maintenance.umbrella_force_trakt_sync",
-      "requires": "plugin.video.umbrella"
-    },
-    {
-      "label": "Clear Umbrella provider cache",
-      "run": "maintenance.umbrella_clear_providers",
-      "requires": "plugin.video.umbrella"
-    },
-    {
-      "label": "Clear Umbrella all caches",
-      "run": "maintenance.umbrella_clear_all",
-      "requires": "plugin.video.umbrella"
-    },
-    {
-      "label": "Clear The Loop cache",
-      "run": "maintenance.loop_clear_cache",
-      "requires": "plugin.video.the-loop"
+      "label": "🧹 Clear caches (Umbrella + The Loop)",
+      "hub": "clear_caches",
+      "plot": "Clears cached data if something's acting up. Safe."
     }
   ],
   "livetv": [

@@ -40,7 +40,7 @@ def load_json(name):
             return json.load(f)
     except Exception:
         log('failed to load %s\n%s' % (path, traceback.format_exc()), xbmc.LOGERROR)
-        xbmcgui.Dialog().notification("Jacob's Hub", 'Bad JSON in %s' % name,
+        xbmcgui.Dialog().notification(THEATER_NAME, 'Bad JSON in %s' % name,
                                       xbmcgui.NOTIFICATION_ERROR)
         return {}
 
@@ -76,30 +76,33 @@ def other_addon(addon_id):
 
 
 def notify(msg, icon=xbmcgui.NOTIFICATION_INFO, time=4000):
-    xbmcgui.Dialog().notification("Jacob's Hub", msg, icon, time)
+    xbmcgui.Dialog().notification(THEATER_NAME, msg, icon, time)
 
 
-def welcome_splash():
-    """Show a random kid-friendly fact (Pokemon / Kirby / Minecraft) on the home screen."""
-    facts = load_json('facts.json')
-    labels = {'pokemon': '\u26A1 Pok\u00e9mon fact',
-              'kirby': '\u2B50 Kirby fact',
-              'minecraft': '\u26CF\uFE0F Minecraft fact'}
+def show_trivia():
+    """Home screen: pop a random trivia question, wait, then reveal the answer.
+    Called AFTER the menu is rendered, so the short wait never blocks the UI."""
+    trivia = load_json('trivia.json')
+    labels = {'pokemon': '\u26A1 Pok\u00e9mon Trivia',
+              'kirby': '\u2B50 Kirby Trivia',
+              'minecraft': '\u26CF\uFE0F Minecraft Trivia'}
     pool = []
-    for topic, items in facts.items():
-        label = labels.get(topic, topic.title() + ' fact')
-        pool.extend((label, f) for f in items)
+    for topic, items in trivia.items():
+        label = labels.get(topic, topic.title() + ' Trivia')
+        pool.extend((label, qa) for qa in items)
     if not pool:
         return
     win = xbmcgui.Window(10000)
-    last = win.getProperty('jacobshub_last_fact')
-    heading, fact = random.choice(pool)
-    for _ in range(5):  # avoid repeating the same fact twice in a row
-        if fact != last:
+    last = win.getProperty('jacobshub_last_trivia')
+    heading, qa = random.choice(pool)
+    for _ in range(5):  # avoid repeating the same question twice in a row
+        if qa.get('q') != last:
             break
-        heading, fact = random.choice(pool)
-    win.setProperty('jacobshub_last_fact', fact)
-    xbmcgui.Dialog().notification(heading, fact, ICON, 7000)
+        heading, qa = random.choice(pool)
+    win.setProperty('jacobshub_last_trivia', qa.get('q', ''))
+    xbmcgui.Dialog().notification(heading, qa.get('q', ''), ICON, 7000)
+    xbmc.sleep(6500)  # give everyone a few seconds to guess
+    xbmcgui.Dialog().notification('\U0001F4A1 Answer', qa.get('a', ''), ICON, 6000)
 
 
 # ---------------------------------------------------------------------------
@@ -116,8 +119,6 @@ def add_item(label, url, is_folder, art=None, plot=None):
 
 def render_menu(menu_id):
     xbmcplugin.setPluginCategory(HANDLE, THEATER_NAME)
-    if menu_id == 'root':
-        welcome_splash()
     items = MENU.get(menu_id)
     if items is None:
         notify('No menu named "%s" in menu.json' % menu_id, xbmcgui.NOTIFICATION_ERROR)
@@ -149,6 +150,8 @@ def render_menu(menu_id):
             add_item(label, hub_url(action='builtin', cmd=it['builtin']), False, art, plot)
     xbmcplugin.setContent(HANDLE, 'videos')
     xbmcplugin.endOfDirectory(HANDLE, cacheToDisc=False)
+    if menu_id == 'root':
+        show_trivia()
 
 
 # ---------------------------------------------------------------------------
@@ -197,7 +200,7 @@ def apply_preset(preset_id, confirm=True):
         return
     settings = preset.get('settings', {})
     total = sum(len(v) for v in settings.values())
-    if confirm and not xbmcgui.Dialog().yesno("Jacob's Hub", '%s\n\nApply %d settings?' %
+    if confirm and not xbmcgui.Dialog().yesno(THEATER_NAME, '%s\n\nApply %d settings?' %
                                   (preset.get('label', preset_id), total)):
         return
     applied, failed = 0, []
@@ -220,7 +223,7 @@ def apply_preset(preset_id, confirm=True):
         msg += ', %d failed (see log)' % len(failed)
     notify(msg)
     if confirm and preset.get('post_notice'):
-        xbmcgui.Dialog().ok("Jacob's Hub", preset['post_notice'])
+        xbmcgui.Dialog().ok(THEATER_NAME, preset['post_notice'])
 
 
 def status_report():
@@ -274,33 +277,36 @@ def do_setup():
     if not steps:
         notify('No setup targets configured', xbmcgui.NOTIFICATION_ERROR)
         return
+    title = "Jake's Config Hub \u2014 Setup"
     todo = [s for s in steps if not installed(s['addon_id'])]
-    if not todo:
-        xbmcgui.Dialog().ok("Jacob's Hub \u2014 Setup", 'Everything is already installed. \U0001F44D')
-        return
-    names = '\n'.join(' - ' + s.get('label', s['addon_id']) for s in todo)
-    if not xbmcgui.Dialog().yesno("Jacob's Hub \u2014 Setup",
+    ok, failed = [], []
+    if todo:
+        names = '\n'.join(' - ' + s.get('label', s['addon_id']) for s in todo)
+        if xbmcgui.Dialog().yesno(title,
                                   'Install the backend add-ons?\n\n%s\n\n'
                                   'Kodi may ask you to confirm each one.' % names):
-        return
-    ok, failed = [], []
-    for s in todo:
-        label = s.get('label', s['addon_id'])
-        notify('Installing %s\u2026' % label)
-        (ok if _install_addon(s['addon_id']) else failed).append(label)
+            for s in todo:
+                label = s.get('label', s['addon_id'])
+                notify('Installing %s\u2026' % label)
+                (ok if _install_addon(s['addon_id']) else failed).append(label)
 
+    # Always offer to (re)configure CocoScrapers when both are present.
     umb, coco = target('ids.umbrella'), target('ids.cocoscrapers')
     if installed(umb) and installed(coco):
-        if xbmcgui.Dialog().yesno("Jacob's Hub \u2014 Setup",
-                                  'Wire CocoScrapers into Umbrella and enable the '
-                                  'recommended providers now?'):
+        if xbmcgui.Dialog().yesno(title,
+                                  'Configure CocoScrapers for Umbrella now?\n\n'
+                                  'Wires it in and turns on the recommended providers.'):
             apply_preset('wire_cocoscrapers', confirm=False)
             apply_preset('coco_recommended', confirm=False)
+            notify('CocoScrapers configured \u2705')
 
-    summary = 'Installed: %s' % (', '.join(ok) if ok else 'none')
-    if failed:
-        summary += '\nFailed (try again / check log): %s' % ', '.join(failed)
-    xbmcgui.Dialog().ok("Jacob's Hub \u2014 Setup", summary)
+    if todo:
+        summary = 'Installed: %s' % (', '.join(ok) if ok else 'none')
+        if failed:
+            summary += '\nFailed (try again / check log): %s' % ', '.join(failed)
+    else:
+        summary = 'Everything is already installed. \U0001F44D'
+    xbmcgui.Dialog().ok(title, summary)
     xbmc.executebuiltin('Container.Refresh')
 
 
@@ -319,6 +325,20 @@ def do_surprise(kind):
         notify('\U0001F3B2 Surprise: %s!' % pick.get('name', 'Sport'))
         url = pick['url']
     xbmc.executebuiltin('Container.Update(%s)' % url)
+
+
+def do_clear_caches():
+    """One button: clear Umbrella's caches and The Loop's cache (whatever's installed)."""
+    jobs = [('plugin.video.umbrella', 'maintenance.umbrella_clear_all'),
+            ('plugin.video.the-loop', 'maintenance.loop_clear_cache')]
+    done = []
+    for addon_id, dotted in jobs:
+        if installed(addon_id):
+            url = target(dotted)
+            if url:
+                xbmc.executebuiltin('RunPlugin(%s)' % url)
+                done.append(addon_id.split('.')[-1])
+    notify('Cleared caches: %s' % (', '.join(done) if done else 'nothing to clear'))
 
 
 # ---------------------------------------------------------------------------
@@ -346,6 +366,8 @@ def router():
         status_report()
     elif action == 'setup':
         do_setup()
+    elif action == 'clear_caches':
+        do_clear_caches()
     elif action == 'surprise':
         do_surprise(params.get('kind', 'movie'))
     elif action == 'builtin':
