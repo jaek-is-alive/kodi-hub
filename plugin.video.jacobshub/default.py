@@ -9,7 +9,9 @@ import os
 import sys
 import traceback
 import urllib.parse
+import urllib.request
 import random
+import time
 
 import xbmc
 import xbmcaddon
@@ -310,21 +312,63 @@ def do_setup():
     xbmc.executebuiltin('Container.Refresh')
 
 
+LIVE_WINDOW = 3.5 * 3600  # a game is "on now" for ~3.5h after its start time
+
+
+def _fetch_json(url, timeout=8):
+    req = urllib.request.Request(url, headers={'User-Agent': 'Kodi/21.1'})
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+        return json.loads(r.read().decode('utf-8', 'replace'))
+
+
+def _sport_is_live(zone_url, now):
+    """True if the sport zone (our get_list deep-link) has a game whose start
+    timestamp is within the live window right now. Each Loop game item carries a
+    UTC epoch 'timestamp', so no timezone math is needed."""
+    if '/get_list/' not in zone_url:
+        return False
+    raw = zone_url.split('/get_list/', 1)[1]
+    try:
+        data = _fetch_json(raw)
+    except Exception:
+        log('surprise: fetch failed for %s' % raw, xbmc.LOGWARNING)
+        return False
+    items = data.get('items', []) if isinstance(data, dict) else (data or [])
+    for it in items:
+        ts = it.get('timestamp') if isinstance(it, dict) else None
+        try:
+            ts = int(ts)
+        except (TypeError, ValueError):
+            continue
+        if ts <= now <= ts + LIVE_WINDOW:
+            return True
+    return False
+
+
 def do_surprise(kind):
-    """Spin a random pick: a movie (via Umbrella search) or a live sport zone."""
+    """Spin a random pick: a movie, or a sport that actually has a game on NOW."""
     pool = target('surprise.%s' % kind)
     if not pool:
         notify('No surprises configured for "%s"' % kind, xbmcgui.NOTIFICATION_ERROR)
         return
-    pick = random.choice(pool)
     if kind == 'movie':
+        pick = random.choice(pool)
         notify('\U0001F3AC Tonight\'s pick: %s' % pick)
-        url = ('plugin://plugin.video.umbrella/?action=movieSearchterm&name=%s'
-               % urllib.parse.quote_plus(pick))
+        xbmc.executebuiltin('Container.Update('
+                            'plugin://plugin.video.umbrella/?action=movieSearchterm&name=%s)'
+                            % urllib.parse.quote_plus(pick))
+        return
+    # sport: only choose among sports that have a live game right now
+    notify('\U0001F3B2 Finding a game that\'s on now\u2026')
+    now = time.time()
+    live = [e for e in pool if _sport_is_live(e.get('url', ''), now)]
+    if live:
+        pick = random.choice(live)
+        notify('\U0001F3B2 Live now: %s!' % pick.get('name', 'Sport'))
     else:
-        notify('\U0001F3B2 Surprise: %s!' % pick.get('name', 'Sport'))
-        url = pick['url']
-    xbmc.executebuiltin('Container.Update(%s)' % url)
+        pick = random.choice(pool)
+        notify('Nothing live right now \u2014 showing %s' % pick.get('name', 'a sport'))
+    xbmc.executebuiltin('Container.Update(%s)' % pick['url'])
 
 
 def do_clear_caches():
