@@ -272,6 +272,45 @@ def _install_addon(addon_id, timeout=90):
     return installed(addon_id)
 
 
+def trust_addons(quiet=False):
+    """Clear Kodi's "installed from unofficial repository" origin flag on the add-ons
+    we ship, so they run without the security block. Kodi flags any origin that isn't
+    the official repo; setting origin='' marks an add-on as manually installed (no repo
+    to warn about). Returns the number of rows cleared, or -1 on error."""
+    import sqlite3
+    import glob
+    dbs = sorted(glob.glob(xbmcvfs.translatePath('special://database/Addons*.db')))
+    if not dbs:
+        log('trust_addons: no Addons*.db found', xbmc.LOGWARNING)
+        return -1
+    db = dbs[-1]
+    # Everything installed through this hub is stamped with our repo id; also cover the
+    # explicit ids we manage in case the origin was set to something else.
+    repo_id = target('ids.repo') or 'repository.jacobshub'
+    ids = {s['addon_id'] for s in TARGETS.get('setup', [])}
+    ids.update(v for v in (TARGETS.get('ids') or {}).values() if v)
+    try:
+        con = sqlite3.connect(db, timeout=10)
+        marks = ','.join('?' * len(ids)) if ids else "''"
+        cur = con.execute(
+            "UPDATE installed SET origin='' "
+            "WHERE origin != '' AND (origin = ? OR addonID IN (%s))" % marks,
+            [repo_id, *ids])
+        con.commit()
+        n = cur.rowcount
+        con.close()
+        log('trust_addons: cleared origin on %d add-on(s)' % n)
+        if not quiet and n:
+            notify('Trusted %d add-on(s) \u2705' % n)
+        return n
+    except Exception:
+        log('trust_addons failed\n%s' % traceback.format_exc(), xbmc.LOGWARNING)
+        if not quiet:
+            notify('Could not auto-trust add-ons (see log)',
+                   xbmcgui.NOTIFICATION_WARNING)
+        return -1
+
+
 def do_setup():
     """One-tap install of the backend addons, served from our own repo, then
     optionally wire CocoScrapers into Umbrella."""
@@ -302,12 +341,17 @@ def do_setup():
             apply_preset('coco_recommended', confirm=False)
             notify('CocoScrapers configured \u2705')
 
+    trusted = trust_addons(quiet=True)
     if todo:
         summary = 'Installed: %s' % (', '.join(ok) if ok else 'none')
         if failed:
             summary += '\nFailed (try again / check log): %s' % ', '.join(failed)
     else:
         summary = 'Everything is already installed. \U0001F44D'
+    if trusted and trusted > 0:
+        summary += ('\nCleared the unofficial-repo flag on %d add-on(s).'
+                    '\n(If a security prompt still appears, restart Kodi once.)'
+                    % trusted)
     xbmcgui.Dialog().ok(title, summary)
     xbmc.executebuiltin('Container.Refresh')
 
@@ -410,6 +454,12 @@ def router():
         status_report()
     elif action == 'setup':
         do_setup()
+    elif action == 'trust':
+        n = trust_addons()
+        xbmcgui.Dialog().ok(THEATER_NAME,
+                            'Cleared the unofficial-repo flag on %d add-on(s).\n'
+                            'If a security prompt still shows, restart Kodi once.'
+                            % max(n, 0))
     elif action == 'clear_caches':
         do_clear_caches()
     elif action == 'surprise':

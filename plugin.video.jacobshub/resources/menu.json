@@ -191,6 +191,11 @@
       "label": "🧹 Clear caches (Umbrella + The Loop)",
       "hub": "clear_caches",
       "plot": "Clears cached data if something's acting up. Safe."
+    },
+    {
+      "label": "🛡️ Trust my add-ons (clear unofficial-repo flag)",
+      "hub": "trust",
+      "plot": "Clears Kodi's unofficial-repository block on The Loop, Umbrella and CocoScrapers so they run. Runs automatically during Setup; use this if you reinstall something and hit the warning. Safe to run anytime."
     }
   ],
   "livetv": [
