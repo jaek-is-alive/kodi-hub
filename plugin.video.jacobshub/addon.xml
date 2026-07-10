@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.jacobshub" name="Jake's Config Hub" version="1.0.16" provider-name="jacob">
+<addon id="plugin.video.jacobshub" name="Jake's Config Hub" version="1.0.17" provider-name="jacob">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
     </requires>

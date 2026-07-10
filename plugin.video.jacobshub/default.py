@@ -272,6 +272,14 @@ def _install_addon(addon_id, timeout=90):
     return installed(addon_id)
 
 
+# Some add-ons ship their OWN "installed from unofficial repository" self-check that
+# reads their `origin` from Kodi's Addons DB and refuse to run unless it's one of the
+# repo names they whitelist. (The Loop's SAFE_REPOS = repository.nexus/.loop/.t3std3v.)
+# Installed from our repo the origin is 'repository.jacobshub', which they reject -- so
+# give each such add-on a value it accepts. Everything else gets '' (plain manual install).
+SAFE_ORIGINS = {'plugin.video.the-loop': 'repository.loop'}
+
+
 def trust_addons(quiet=False):
     """Clear Kodi's "installed from unofficial repository" origin flag on the add-ons
     we ship, so they run without the security block. Kodi flags any origin that isn't
@@ -291,15 +299,18 @@ def trust_addons(quiet=False):
     ids.update(v for v in (TARGETS.get('ids') or {}).values() if v)
     try:
         con = sqlite3.connect(db, timeout=10)
-        marks = ','.join('?' * len(ids)) if ids else "''"
-        cur = con.execute(
-            "UPDATE installed SET origin='' "
-            "WHERE origin != '' AND (origin = ? OR addonID IN (%s))" % marks,
-            [repo_id, *ids])
+        # sweep anything currently stamped with our repo id, plus the ids we manage
+        ids |= {r[0] for r in con.execute(
+            "SELECT addonID FROM installed WHERE origin = ?", (repo_id,))}
+        for aid in ids:
+            want = SAFE_ORIGINS.get(aid, '')
+            # `IS NOT` is NULL-safe, so this only touches rows that actually differ
+            con.execute("UPDATE installed SET origin = ? WHERE addonID = ? "
+                        "AND origin IS NOT ?", (want, aid, want))
         con.commit()
-        n = cur.rowcount
+        n = con.total_changes
         con.close()
-        log('trust_addons: cleared origin on %d add-on(s)' % n)
+        log('trust_addons: re-stamped origin on %d add-on(s)' % n)
         if not quiet and n:
             notify('Trusted %d add-on(s) \u2705' % n)
         return n
