@@ -58,6 +58,48 @@ OFFICIAL = {
     'plugin.googledrive',
 }
 
+# The Loop's addon.xml omits runtime deps it actually imports (bs4, dateutil, etc.).
+# They live in the official Kodi repo, so DECLARING them lets Kodi's InstallAddon resolve
+# them automatically. Without these, both folder-drop AND the Config Hub Setup button leave
+# The Loop unable to import -> empty menu. Inject them during vendoring.
+EXTRA_IMPORTS = {
+    'plugin.video.the-loop': [
+        'script.module.beautifulsoup4', 'script.module.soupsieve',
+        'script.module.dateutil', 'script.module.six',
+        'script.module.kodi-six', 'script.module.future',
+        'script.module.simplejson',
+    ],
+}
+
+
+def patch_imports(aid, data):
+    """Add any missing EXTRA_IMPORTS for `aid` to its addon.xml <requires>, re-zip."""
+    extra = EXTRA_IMPORTS.get(aid)
+    if not extra:
+        return data
+    zin = zipfile.ZipFile(io.BytesIO(data))
+    axn = next((n for n in zin.namelist()
+                if n.count('/') == 1 and n.endswith('/addon.xml')), None)
+    if not axn:
+        return data
+    root = ET.fromstring(zin.read(axn))
+    req = root.find('requires')
+    if req is None:
+        return data
+    have = {imp.get('addon') for imp in req.iter('import')}
+    added = [d for d in extra if d not in have]
+    if not added:
+        return data
+    for dep in added:
+        ET.SubElement(req, 'import', {'addon': dep})
+    new_ax = ET.tostring(root, encoding='utf-8')
+    buf = io.BytesIO()
+    with zipfile.ZipFile(buf, 'w', zipfile.ZIP_DEFLATED) as zout:
+        for it in zin.infolist():
+            zout.writestr(it, new_ax if it.filename == axn else zin.read(it.filename))
+    print('    patched %s addon.xml: +%s' % (aid, ', '.join(added)))
+    return buf.getvalue()
+
 
 def fetch(url):
     req = urllib.request.Request(url, headers={'User-Agent': UA})
@@ -116,6 +158,7 @@ def download_addon(aid, index):
         return None, 'download failed: %s' % e
     if data[:2] != b'PK':
         return None, 'not a zip: %s' % url
+    data = patch_imports(aid, data)
     out_dir = os.path.join(ZIPS, aid)
     os.makedirs(out_dir, exist_ok=True)
     with open(os.path.join(out_dir, '%s-%s.zip' % (aid, ver)), 'wb') as f:

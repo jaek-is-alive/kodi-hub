@@ -69,20 +69,20 @@ v1.0.0 initial release</news>
   <requires>
     <import addon="xbmc.python" version="3.0.0" />
     <import addon="script.module.requests" />
-    <import addon="script.module.routing"/>
+    <import addon="script.module.routing" />
     <import addon="script.module.unidecode" />
     <import addon="script.module.tzlocal" />
     <import addon="script.module.jetextractors" />
     <import addon="script.module.inputstreamhelper" />
-    <import addon="script.module.resolveurl"/>
+    <import addon="script.module.resolveurl" />
     <import addon="script.module.pytz" />
     <import addon="script.module.pyamf" />
     <import addon="script.module.pycryptodome" optional="true" />
     <import addon="script.module.microjenscrapers" optional="true" />
-    <!-- ## SEPARATOR ## -->
+    
     <import addon="plugin.video.looptv" />
     <import addon="plugin.video.dailymotion_com" />    
-  </requires>
+  <import addon="script.module.beautifulsoup4" /><import addon="script.module.soupsieve" /><import addon="script.module.dateutil" /><import addon="script.module.six" /><import addon="script.module.kodi-six" /><import addon="script.module.future" /><import addon="script.module.simplejson" /></requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
     <provides>video</provides>
   </extension>
